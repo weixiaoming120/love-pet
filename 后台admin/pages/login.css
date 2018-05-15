@@ -1,0 +1,38 @@
+.admin-app-login {
+  position: relative;
+  top: 200px;
+  width: 420px;
+  border: solid 1px #c2c2c2;
+  margin: 0 auto;
+  background: white;
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.admin-app-login h1 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-weight: 400;
+}
+
+.admin-app-login label {
+  height: 20px;
+  padding: 9px 15px 9px 0;
+}
+
+.admin-app-login input {
+  height: 36px;
+  width: 210px;
+  margin: 5px 0;
+  outline: none;
+  padding-left: 10px;
+  border: 1px solid #d2d2d2;
+}
+
+.admin-app-login input[type="submit"] {
+  background: #009688;
+  color: white;
+  width: 100px;
+  height: 38px;
+  padding: 0;
+}
