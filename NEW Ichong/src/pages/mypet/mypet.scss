@@ -1,0 +1,26 @@
+page-mypet {
+    ion-list img{
+        margin-left: 18px;
+        border-radius: 50%;
+        width: 80px;
+        float: left;
+        padding-bottom: 10px;
+    }
+    .pet_name li b{
+        font-size: 21px;
+        margin-left: 30px;
+        color: #cf0000;
+    }
+    .pet_name p{
+        margin-top: 20px;
+    }
+    .pet_name font{
+        font-size: 20px;
+        margin-left: 10px;
+    
+    }
+    .pet_name p ion-icon{
+        font-size: 20px;
+        margin-left: 30px;
+    }
+}

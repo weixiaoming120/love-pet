@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+       疫苗接种
+    </ion-title>
+    <ion-buttons end style="margin-right:15px">
+      <button ion-button icon-only  (click)="addym()">
+         添加
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="yimiaobg"> 
+ <div class="yimiao">
+   <ul class="yimiao-ul">
+     <li class="yimiao-li">
+        <div class="ym1"><span>四联</span><br/><span>2月龄</span></div>
+        <div class="ym2"><button (click)="achieve()" class="wei">未接种</button></div>
+     </li>
+
+     <li class="yimiao-li">
+      <div class="ym1"><span>四联</span><br/><span>2月龄</span></div>
+      <div class="ym2"><button (click)="achieve()">未接种</button></div>
+   </li>
+
+   <li class="yimiao-li">
+    <div class="ym1"><span>二联</span><br/><span>10天龄</span></div>
+    <div class="ym22"><button (click)="achieve()">已接种</button></div>
+ </li>
+   </ul>
+ </div>
+</ion-content>

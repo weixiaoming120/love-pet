@@ -1,0 +1,27 @@
+page-text {
+    ion-title{
+        text-align:center;
+    }
+    .toolbar-title-md {
+        font-weight: 600;
+    }
+    .btn{
+        font-size: 1.7rem;
+        font-weight:500;
+    }
+    .textarea{
+        height:200px;
+        background-color:white;
+    } 
+    .header-image {
+        width: auto;
+        height: 85px;
+        margin-top: 20px;
+        padding-left: 15px;
+        background-size: cover;
+        float:left;
+        img{
+            float: left;
+        }
+      }
+}

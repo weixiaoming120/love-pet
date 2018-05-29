@@ -1,0 +1,90 @@
+page-mine {
+    .mine_1{
+        width: 100%;
+        height: auto;
+    }
+    .mine_1 img{
+        border-radius: 50%;
+        width: 15%;
+        float: left;
+        padding-bottom: 10px;
+        margin-left: 18px;
+    }
+    .mine_name li{
+        margin-left: 20px;
+        float: left;
+        line-height: 30px;
+        color: #cf0000;
+    }
+    .mine_name p{
+        margin-top: 10px;
+        color: gray;
+    }
+    .mine_name font{
+        font-size: 21px;
+    }
+    .mine_1_icon{
+        float: right;
+        margin-right: 30px;
+        line-height: 80px;
+    }   
+    .mine_1 ion-icon{
+        color: #cf0000;
+        font-size: 35px;
+    }
+    .mine_row ion-col{
+       height: 72px;
+       float: left;       
+       margin-top: 10px;
+       margin-bottom: 10px;
+    }
+    .mine_col_bord{
+        border-right: 1px solid #e6e6e6;
+    }
+    .mine_row ion-col span{
+        float: left;
+        margin-top: 10px;
+        margin-left: 25%;
+        font-size: 18px;
+        color: gray;
+    }
+    .mine_row ion-col ion-icon{
+        float: left;
+        margin-left: 40%;
+    }
+    .mine_set span{
+        font-size: 18px;
+        margin-left: 18px;
+    }
+    .mine_set ion-icon{
+        margin-right: 20px;
+        float: right;
+        line-height: 24px;
+        color: #cf0000;
+    }
+    
+   
+    
+
+}
+.minehea{
+    text-align: center;
+}
+.minebg{
+    background-color: #f9f9f9;
+}
+ul li{
+    list-style: none;
+}
+ul{
+    padding: 0 0 0 0;
+}
+ion-app.md [padding] .scroll-content {
+    padding: 0px;
+}
+.item-md{
+    padding-left: 0px;
+}
+.label-md{
+    margin: 0;
+}

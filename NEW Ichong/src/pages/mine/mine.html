@@ -1,0 +1,73 @@
+<ion-header>
+  <ion-navbar class="minehea" color="primary">
+    <ion-title>我的</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="minebg">
+  <ion-list class="mine_1">
+    <ion-item (click)="profile()">
+      <ul>
+        <li>
+          <img src="assets/mineImg/fcc.jpg">
+          <ul class="mine_name">
+            <li>
+                <font>福西西</font>
+                <p>这个人去照顾宠物啦~没空写简介</p>
+            </li>
+          </ul>
+          <ion-icon name="ios-arrow-forward" class="mine_1_icon"></ion-icon>
+        </li>
+      </ul>
+    </ion-item>
+    <ion-item>
+      <ion-grid>
+        <ion-row class="mine_row">
+          <ion-col class="mine_col_bord">
+            <ion-icon name="add" (click)="addpet()"></ion-icon>
+            <span>添加宠物</span>
+          </ion-col>
+          <ion-col class="mine_col_bord">
+            <ion-icon name="paw" (click)="mypet()"></ion-icon>
+            <span>我的宠物</span>
+          </ion-col>
+          <ion-col>
+            <ion-icon name="star" (click)="colart()"></ion-icon>
+            <span>收藏文章</span>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-item class="mine_set" (click)="set()">
+      <ul>
+        <li>
+          <span>通用设置</span>
+          <ion-icon name="ios-arrow-forward"></ion-icon>
+        </li>
+      </ul>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+      <ion-item class="mine_set">
+        <ul>
+          <li>
+            <span>关于</span>
+            <ion-icon name="ios-arrow-forward"></ion-icon>
+          </li>
+        </ul>
+      </ion-item>
+      <ion-item class="mine_set" (click)="feedback()">
+          <ul>
+            <li>
+              <span>意见反馈</span>
+              <ion-icon name="ios-arrow-forward"></ion-icon>
+            </li>
+          </ul>
+        </ion-item>
+    </ion-list>
+</ion-content>
+

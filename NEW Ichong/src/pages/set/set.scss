@@ -1,0 +1,23 @@
+page-set {
+    .set_item span{
+        margin-left: 18px;
+        font-size: 18px;
+    }
+    .set_item ion-icon{
+        margin-right: 30px;
+        float: right;
+        color: #cf0000;
+    }
+    .set_btn{
+        margin-top: 100px;
+    }
+    .set_btn button{
+        font-size: 20px;
+        width: 280px;
+        margin-left: 18%;
+    }
+    .item-md.item-toggle ion-label {
+        margin-left: 18px;
+        font-size: 18px;
+    }
+}

@@ -1,0 +1,31 @@
+
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>宠物健康小常识</ion-title>
+    <ion-buttons end class="loginhb">
+      <button ion-button icon-only>
+          <ion-icon ></ion-icon>
+      </button>
+   </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="pethealthbg">
+ <!-- <div class="pethealth-div"> -->
+   <ul class="pethealth-ul">
+     <li class="pethealth-li" (click)="helarticle(item)"  *ngFor="let item of list;let i=index;">
+       <div class="pethealth-img">
+          <img src="{{item.pic}}">
+       </div>
+       <div class="pethealth-content">
+          <span class="pet-title">{{item.title}}</span>
+          <p class="pet-content">{{item.content}}</p>
+          <p class="pet-date">{{item.publishtime}}</p>
+       </div>
+     </li>
+   </ul>
+ <!-- </div> -->
+
+ 
+</ion-content>
+  

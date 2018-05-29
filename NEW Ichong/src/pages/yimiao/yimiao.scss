@@ -1,0 +1,85 @@
+page-yimiao {
+    ion-title{
+        margin-left: 38%;
+    }
+    .yimiaobg{
+        background: #f9f9f9;
+    }
+    ul {
+        padding: 0 0 0 0;
+    }
+    ul li{
+        list-style: none;
+    }
+   //  .yimiao{
+   //      border:1px solid black;
+   //      height: 100%;
+   //      width: 100%;
+   //  }
+    .yimiao-ul{
+       height: 500px;
+       width: 100%;
+    }
+    .yimiao-li{
+       border:1px solid lightgray;
+       margin-top: 2%;
+       background: white;
+       height: 15%;
+       width: 100%;
+    }
+    .ym1{
+        float: left;
+        height: 100%;
+        width: 50%;
+        padding-left: 10%;
+        padding-top: 2%;
+        span{
+            line-height: 30px;
+            font-size: 16px;
+        }
+    }
+   .ym2{
+       height: 100%;
+       width: 50%;
+       float: left;
+       button{
+           margin-left: 50%;
+           margin-top: 13%;
+           background: #cf0000;
+           border-radius: 20px;
+           color: white;
+           font-size: 14px;
+           font-weight: 600;
+           width: 40%;
+           height:45%;
+       }
+   }
+   .ym22{
+       height: 100%;
+       width: 50%;
+       float: left;
+       button{
+           margin-left: 50%;
+           margin-top: 13%;
+           background: gray;
+           border-radius: 20px;
+           color: white;
+           font-size: 14px;
+           font-weight: 600;
+           width: 40%;
+           height:40%;
+       }
+   }
+   .achieve{
+       margin-left: 50%;
+       margin-top: 13%;
+       background: lightgray;
+       border-radius: 20px;
+       color: white;
+       font-size: 14px;
+       font-weight: 600;
+       width: 40%;
+       height:40%;
+   }
+   
+   }

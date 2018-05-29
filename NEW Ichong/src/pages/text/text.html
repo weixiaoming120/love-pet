@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar color="primary">
+      <ion-title>新日常</ion-title>
+      <ion-buttons end style="width:55px;">
+          <button ion-button icon-only class="btn">发布</button>
+      </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content class="minebg">
+  <ion-input type="textarea" class="textarea" placeholder="来详细描述一下您的爱宠信息吧…"></ion-input>
+  <div class="header-image" tappable>
+    <img src="assets/imgs/camera.png" width="90px" height="85px" (click)="presentActionSheet()">
+    <div [ngStyle]="{'background-image': 'url('+avatar+')'}" style="width:90px;height:85px;margin-top: 20px;
+    padding-left: 15px;background-size: cover;float:left;"></div>
+  </div>
+</ion-content>
+

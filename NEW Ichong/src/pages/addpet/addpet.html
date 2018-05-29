@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-navbar class="minehea" color="primary">
+    <ion-title>添加宠物</ion-title>
+    <ion-buttons end style="margin-right:15px">
+      <button ion-button icon-only>
+          保存
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="minebg">
+  <ion-list>
+    <ion-item class="add_tou">
+      <div class="add_tou_xiang" [ngStyle]="{'background-image': 'url('+avatar+')'}"></div>
+      <ion-icon name="camera" (click)="presentActionSheet()"></ion-icon>
+    </ion-item>
+    <ion-item class="add_name">
+      <ion-label>I宠昵称</ion-label>
+      <ion-input placeholder="pet name..." [(ngModel)]="usrid"></ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-list radio-group [(ngModel)]="autoManufacturers">
+    <ion-item class="add_sex">   
+      <ion-label><ion-icon name="female"></ion-icon>Girl</ion-label>
+      <ion-radio value="Girl"></ion-radio>
+    </ion-item>
+    <ion-item class="add_sex">
+      <ion-label><ion-icon name="male"></ion-icon>Boy</ion-label>
+      <ion-radio value="Boy"></ion-radio> 
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-item class="select">
+        <ion-label>Ichong种类</ion-label>
+        <ion-select [(ngModel)]="addone" class="select_add" interface="popover">         
+          <ion-option value="wang" selected="true">汪汪~</ion-option>
+          <ion-option value="miao">喵喵~</ion-option>
+        </ion-select>
+    </ion-item>
+    <ion-item class="date">
+        <ion-label>出生日期</ion-label>
+        <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="myDate" doneText="确认" cancelText="取消"></ion-datetime>      
+    </ion-item>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,32 @@
+page-petdetail {
+    ion-title{
+        text-align:center;
+    }
+    .toolbar-title-md {
+        font-weight: 600;
+    }
+    .btn{
+        font-size: 1.7rem;
+        font-weight:500;
+    }
+    .picture{
+        img{
+            width:94%;
+            margin:0 3% 0 3%;
+        }      
+    }
+    p{
+        font-size:18px;
+        text-indent:2rem;
+        padding:0px 3%;
+    }
+    .tel{
+        width:100%;
+        border-top:1px solid #8c8c8c;
+        line-height:50px;
+    }
+    .add{
+        line-height:20px;
+        margin-top:-25px;
+    }
+}
