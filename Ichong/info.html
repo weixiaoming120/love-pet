@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>《I宠》APP文档接口</title>
+</head>
+<body>
+<h2 style="text-align: center;">《I宠》APP文档接口说明</h2>
+<table border="1" cellspacing="0" style="margin:auto;">
+	<tr>
+		<td colspan="4" width="800px" align="center">登录：http://127.0.0.1:3000/login</td>
+	</tr>
+	<tr>
+		<td width="150px" align="center">参数说明</td>
+		<td width="250px" align="center">username:用户名<br/>
+		password:密码<br/>
+		</td>
+		<td width="150px" align="center">返回结果说明</td>
+		<td width="250px" align="center">当返回“1”：登录成功<br/>
+		当返回“2”：用户名与密码不符<br/>
+        当返回“3”：用户名不存在<br/>
+		</td>
+	</tr>
+	<tr><td colspan="4" width="800px" height="20px"></td>
+	</tr>
+	<tr>
+		<td colspan="4" width="800px" align="center">注册：http://127.0.0.1:3000/register</td>
+	</tr>
+	<tr>
+		<td width="150px" align="center">参数说明</td>
+		<td width="250px" align="center">username:用户名<br/>
+		password:密码<br/>
+		telephone:手机号<br/>
+		</td>
+		<td width="150px" align="center">返回结果说明</td>
+		<td width="250px" align="center">当返回“1”：登录成功<br/>
+		当返回“2”：用户名已存在<br/>
+		</td>
+	</tr>
+	<tr><td colspan="4" width="800px" height="20px"></td>
+	</tr>
+	<tr>
+		<td colspan="4" width="800px" align="center">发布日常：http://127.0.0.1:3000/publishAdd</td>
+	</tr>
+	<tr>
+		<td width="150px" align="center">参数说明</td>
+		<td width="250px" align="center">username:用户名<br/>
+		petname:宠物名<br/>
+		pubpic:图片相册<br/>
+		pubcontent:发布内容<br/>
+		date:发布日期<br/>
+		</td>
+		<td width="150px" align="center">返回结果说明</td>
+		<td width="250px" align="center">当返回“1”：成功<br/>
+		当返回“2”：出现错误<br/>
+		</td>
+	</tr>
+	<tr><td colspan="4" width="800px" height="20px"></td>
+	</tr>
+	<tr>
+		<td colspan="4" width="800px" align="center">日常页面呈现：http://127.0.0.1:3000/publish</td>
+	</tr>
+	<tr>
+		<td width="150px" align="center">参数说明</td>
+		<td width="250px" align="center">username:用户名<br/>
+		petname:宠物名<br/>
+		pubpic:图片相册<br/>
+		pubcontent:发布内容<br/>
+		date:发布日期<br/>
+		</td>
+		<td width="150px" align="center">返回结果说明</td>
+		<td width="250px" align="center">当返回“1”：成功<br/>
+		当返回“2”：出现错误<br/>
+		</td>
+	</tr>
+	<tr><td colspan="4" width="800px" height="20px"></td>
+	</tr>
+	<tr>
+		<td colspan="4" width="800px" align="center">I宠健康档案：http://127.0.0.1:3000/pethealthAdd</td>
+	</tr>
+	<tr>
+		<td width="150px" align="center">参数说明</td>
+		<td width="250px" align="center">username:用户名<br/>
+		petname:宠物名<br/>
+		height:身高<br/>
+		weight:体重<br/>
+		</td>
+		<td width="150px" align="center">返回结果说明</td>
+		<td width="250px" align="center">当返回“1”：成功<br/>
+		当返回“2”：出现错误<br/>
+		</td>
+	</tr>
+	<tr><td colspan="4" width="800px" height="20px"></td>
+	</tr>
+	<tr>
+		<td colspan="4" width="800px" align="center">I宠健康档案呈现：http://127.0.0.1:3000/pethealth</td>
+	</tr>
+	<tr>
+		<td width="150px" align="center">参数说明</td>
+		<td width="250px" align="center">username:用户名<br/>
+		petname:宠物名<br/>
+		height:身高<br/>
+		weight:体重<br/>
+		</td>
+		<td width="150px" align="center">返回结果说明</td>
+		<td width="250px" align="center">当返回“1”：成功<br/>
+		当返回“2”：出现错误<br/>
+		</td>
+	</tr>
+	<tr><td colspan="4" width="800px" height="20px"></td>
+	</tr>
+	<tr>
+		<td colspan="4" width="800px" align="center">健康记录：http://127.0.0.1:3000/petrecordAdd</td>
+	</tr>
+	<tr>
+		<td width="150px" align="center">参数说明</td>
+		<td width="250px" align="center">username:用户名<br/>
+		petname:宠物名<br/>
+		addtime:写入日期<br/>
+		food:吃食<br/>
+		activity:活动<br/>
+		defecationnumber:排便次数<br/>
+		other:其他<br/>
+		</td>
+		<td width="150px" align="center">返回结果说明</td>
+		<td width="250px" align="center">当返回“1”：成功<br/>
+		当返回“2”：出现错误<br/>
+		</td>
+	</tr>
+	<tr><td colspan="4" width="800px" height="20px"></td>
+	</tr>
+	<tr>
+		<td colspan="4" width="800px" align="center">健康记录呈现：http://127.0.0.1:3000/petrecord</td>
+	</tr>
+	<tr>
+		<td width="150px" align="center">参数说明</td>
+		<td width="250px" align="center">username:用户名<br/>
+		petname:宠物名<br/>
+		addtime:写入日期<br/>
+		food:吃食<br/>
+		activity:活动<br/>
+		defecationnumber:排便次数<br/>
+		other:其他<br/>
+		</td>
+		<td width="150px" align="center">返回结果说明</td>
+		<td width="250px" align="center">当返回“1”：成功<br/>
+		当返回“2”：出现错误<br/>
+		</td>
+	</tr>
+	<tr><td colspan="4" width="800px" height="20px"></td>
+	</tr>
+	<tr>
+		<td colspan="4" width="800px" align="center">添加疫苗：http://127.0.0.1:3000/vaccineAdd</td>
+	</tr>
+	<tr>
+		<td width="150px" align="center">参数说明</td>
+		<td width="250px" align="center">username:用户名<br/>
+		petname:宠物名<br/>
+		vaccinename:疫苗名称<br/>
+		petage:接种时间<br/>
+		status:状态<br/>
+		</td>
+		<td width="150px" align="center">返回结果说明</td>
+		<td width="250px" align="center">当返回“1”：成功<br/>
+		当返回“2”：出现错误<br/>
+		</td>
+	</tr>
+	<tr><td colspan="4" width="800px" height="20px"></td>
+	</tr>
+	<tr>
+		<td colspan="4" width="800px" align="center">疫苗列表呈现：http://127.0.0.1:3000/vaccine</td>
+	</tr>
+	<tr>
+		<td width="150px" align="center">参数说明</td>
+		<td width="250px" align="center">username:用户名<br/>
+		petname:宠物名<br/>
+		vaccinename:疫苗名称<br/>
+		petage:接种时间<br/>
+		status:状态<br/>
+		</td>
+		<td width="150px" align="center">返回结果说明</td>
+		<td width="250px" align="center">当返回“1”：成功<br/>
+		当返回“2”：出现错误<br/>
+		</td>
+	</tr>
+	<tr><td colspan="4" width="800px" height="20px"></td>
+	</tr>
+	<tr>
+		<td colspan="4" width="800px" align="center">文章呈现：http://127.0.0.1:3000/artical</td>
+	</tr>
+	<tr>
+		<td width="150px" align="center">参数说明</td>
+		<td width="250px" align="center">title:文章标题<br/>
+		content:文章内容<br/>
+		pic:文章图片<br/>
+		publishtime:发布时间<br/>
+		</td>
+		<td width="150px" align="center">返回结果说明</td>
+		<td width="250px" align="center">当返回“1”：成功<br/>
+		当返回“2”：出现错误<br/>
+		</td>
+	</tr>
+	<tr><td colspan="4" width="800px" height="20px"></td>
+	</tr>
+	<tr>
+		<td colspan="4" width="800px" align="center">宠物店列表呈现：http://127.0.0.1:3000/petshop</td>
+	</tr>
+	<tr>
+		<td width="150px" align="center">参数说明</td>
+		<td width="250px" align="center">petshopname:宠物店名<br/>
+		petshopregion:宠物店地域分类<br/>
+		petshopimage:宠物店图片<br/>
+		petshopaddress:宠物店地址<br/>
+		</td>
+		<td width="150px" align="center">返回结果说明</td>
+		<td width="250px" align="center">当返回“1”：成功<br/>
+		当返回“2”：出现错误<br/>
+		</td>
+	</tr>
+	<tr><td colspan="4" width="800px" height="20px"></td>
+	</tr>
+	<tr>
+		<td colspan="4" width="800px" align="center">带我回家宠物信息呈现：http://127.0.0.1:3000/petlist</td>
+	</tr>
+	<tr>
+		<td width="150px" align="center">参数说明</td>
+		<td width="250px" align="center">username:用户名<br/>
+		petname:宠物名<br/>
+		petimage:图片<br/>
+		address:地址信息<br/>
+		phone:联系方式<br/>
+		petinformation:相关介绍<br/>
+		</td>
+		<td width="150px" align="center">返回结果说明</td>
+		<td width="250px" align="center">当返回“1”：成功<br/>
+		当返回“2”：出现错误<br/>
+		</td>
+	</tr>
+	<tr><td colspan="4" width="800px" height="20px"></td>
+	</tr>
+	<tr>
+		<td colspan="4" width="800px" align="center">发布宠物信息：http://127.0.0.1:3000/petlistAdd</td>
+	</tr>
+	<tr>
+		<td width="150px" align="center">参数说明</td>
+		<td width="250px" align="center">username:用户名<br/>
+		petname:宠物名<br/>
+		petimage:图片<br/>
+		address:地址信息<br/>
+		phone:联系方式<br/>
+		petinformation:相关介绍<br/>
+		</td>
+		<td width="150px" align="center">返回结果说明</td>
+		<td width="250px" align="center">当返回“1”：成功<br/>
+		当返回“2”：出现错误<br/>
+		</td>
+	</tr>
+	<tr><td colspan="4" width="800px" height="20px"></td>
+	</tr>
+	<tr>
+		<td colspan="4" width="800px" align="center">添加宠物信息：http://127.0.0.1:3000/petmessageAdd</td>
+	</tr>
+	<tr>
+		<td width="150px" align="center">参数说明</td>
+		<td width="250px" align="center">username:用户名<br/>
+		petname:宠物名<br/>
+		petsex:宠物性别<br/>
+		petkind:宠物种类<br/>
+		petpic:图片<br/>
+		petdate:宠物出生日期<br/>
+		</td>
+		<td width="150px" align="center">返回结果说明</td>
+		<td width="250px" align="center">当返回“1”：成功<br/>
+		当返回“2”：出现错误<br/>
+		</td>
+	</tr>
+	<tr><td colspan="4" width="800px" height="20px"></td>
+	</tr>
+	<tr>
+		<td colspan="4" width="800px" align="center">我的宠物信息呈现：http://127.0.0.1:3000/petmessage</td>
+	</tr>
+	<tr>
+		<td width="150px" align="center">参数说明</td>
+		<td width="250px" align="center">username:用户名<br/>
+		petname:宠物名<br/>
+		petsex:宠物性别<br/>
+		petkind:宠物种类<br/>
+		petpic:图片<br/>
+		petdate:宠物出生日期<br/>
+		</td>
+		<td width="150px" align="center">返回结果说明</td>
+		<td width="250px" align="center">当返回“1”：成功<br/>
+		当返回“2”：出现错误<br/>
+		</td>
+	</tr>
+	<tr><td colspan="4" width="800px" height="20px"></td>
+	</tr>
+	<tr>
+		<td colspan="4" width="800px" align="center">删除我的宠物信息：http://127.0.0.1:3000/petmessage/del</td>
+	</tr>
+	<tr>
+		<td width="150px" align="center">参数说明</td>
+		<td width="250px" align="center">username:用户名<br/>
+		petname:宠物名<br/>
+		petsex:宠物性别<br/>
+		petkind:宠物种类<br/>
+		petpic:图片<br/>
+		petdate:宠物出生日期<br/>
+		</td>
+		<td width="150px" align="center">返回结果说明</td>
+		<td width="250px" align="center">当返回“1”：成功<br/>
+		当返回“2”：出现错误<br/>
+		</td>
+	</tr>
+	<tr><td colspan="4" width="800px" height="20px"></td>
+	</tr>
+	<tr>
+		<td colspan="4" width="800px" align="center">完善个人信息：http://127.0.0.1:3000/login/amend</td>
+	</tr>
+	<tr>
+		<td width="150px" align="center">参数说明</td>
+		<td width="250px" align="center">username:用户名<br/>
+		pic:头像<br/>
+		gender:性别<br/>
+		telephone:联系方式<br/>
+		email:邮箱<br/>
+		introduction:个人简介<br/>
+		</td>
+		<td width="150px" align="center">返回结果说明</td>
+		<td width="250px" align="center">当返回“1”：成功<br/>
+		当返回“2”：出现错误<br/>
+		</td>
+	</tr>
+	<tr><td colspan="4" width="800px" height="20px"></td>
+	</tr>
+	<tr>
+		<td colspan="4" width="800px" align="center">个人信息呈现：http://127.0.0.1:3000/login/get</td>
+	</tr>
+	<tr>
+		<td width="150px" align="center">参数说明</td>
+		<td width="250px" align="center">username:用户名<br/>
+		pic:头像<br/>
+		gender:性别<br/>
+		telephone:联系方式<br/>
+		email:邮箱<br/>
+		introduction:个人简介<br/>
+		</td>
+		<td width="150px" align="center">返回结果说明</td>
+		<td width="250px" align="center">当返回“1”：成功<br/>
+		当返回“2”：出现错误<br/>
+		</td>
+	</tr>
+
+	<tr><td colspan="4" width="800px" height="20px"></td>
+	</tr>
+	<tr>
+		<td colspan="4" width="800px" align="center">更新用户头像:http://192.168.110.1:3000/imguser
+</td>
+	</tr>
+	<tr>
+		<td width="150px" align="center">参数说明</td>
+		<td width="250px" align="center">username:用户名<br/>
+		pic:头像<br/>
+		
+		</td>
+		<td width="150px" align="center">返回结果说明</td>
+		<td width="250px" align="center">当返回“1”：成功<br/>
+		当返回“2”：出现错误<br/>
+		</td>
+	</tr>
+	<tr><td colspan="4" width="800px" height="20px"></td>
+	</tr>
+	<tr>
+		<td colspan="4" width="800px" align="center">更新宠物头像:http://192.168.110.1:3000/addpetimg
+</td>
+	</tr>
+	<tr>
+		<td width="150px" align="center">参数说明</td>
+		<td width="250px" align="center">username:用户名<br/>
+		petpic:头像<br/>
+		
+		</td>
+		<td width="150px" align="center">返回结果说明</td>
+		<td width="250px" align="center">当返回“1”：成功<br/>
+		当返回“2”：出现错误<br/>
+		</td>
+	</tr>
+	<tr><td colspan="4" width="800px" height="20px"></td>
+	</tr>
+	<tr>
+		<td colspan="4" width="800px" align="center">更新日常相册:http://192.168.110.1:3000/img/pubpic
+</td>
+	</tr>
+	<tr>
+		<td width="150px" align="center">参数说明</td>
+		<td width="250px" align="center">username:用户名<br/>
+		pubpic:图片<br/>
+		
+		</td>
+		<td width="150px" align="center">返回结果说明</td>
+		<td width="250px" align="center">当返回“1”：成功<br/>
+		当返回“2”：出现错误<br/>
+		</td>
+	</tr>
+	<tr><td colspan="4" width="800px" height="20px"></td>
+	</tr>
+	<tr>
+		<td colspan="4" width="800px" align="center">文章收藏功能:http://192.168.110.1:3000/articalcollect
+
+</td>
+	</tr>
+	<tr>
+		<td width="150px" align="center">参数说明</td>
+		<td width="250px" align="center">articalstatus:是否收藏<br/>
+		
+		</td>
+		<td width="150px" align="center">返回结果说明</td>
+		<td width="250px" align="center">当返回“1”：成功<br/>
+		当返回“2”：出现错误<br/>
+		</td>
+	</tr>
+</table>
+</body>
+</html>
