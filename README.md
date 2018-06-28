@@ -44,6 +44,6 @@ our first cooperation
 <img src="image/16.jpg" width=250 height=400 />
 <img src="image/17.jpg" width=250 height=400 />
 <img src="image/18.jpg" width=250 height=400 />
-<img src="image/19.jpg" width=650 height=400 />
-<img src="image/20.jpg" width=650 height=400 />
+<img src="image/19.jpg" width=800 height=500 />
+<img src="image/20.jpg" width=800 height=500 />
 
