@@ -1,0 +1,114 @@
+page-login {
+   
+   .item-md.item-block .item-inner {
+        border-bottom: 0;
+    }
+   //图片
+  .picture{
+         width:100%;
+         height:auto;
+   }
+   .tou{
+       width:30%;
+       height:30%;
+       margin-left: 35%;
+       margin-top:7%;   
+   }
+   .xiang{
+       border-radius:50%;
+   }
+   //输入框
+   .in1{
+       margin-top:5%;
+       border-top:0.55px solid #c8c7cc;
+       border-bottom:0.55px solid #c8c7cc;
+    }
+    .phone{
+         font-size:"黑体";
+         font-size: 18px;
+    }
+    .in2{
+        border-bottom:0.55px solid #c8c7cc;
+    }
+    .pass{
+     font-size:"黑体";
+     font-size: 18px;
+  }
+  //登录按钮
+  .login{
+      width:80%;
+      margin-left: 10%;
+      margin-top:7%;
+      font-size:"黑体";
+      font-size: 16px;
+  }
+  //忘记密码
+  .forget{
+      float: left;
+      margin-top:5%;
+      margin-left:5%;
+  }
+  .new{
+     float: left;
+     color:#364ac4;
+     margin-top:5%;
+     margin-left:48%;
+  }
+  .register{
+     float: right;
+     margin-top:5%;
+     margin-right: 5%;
+  }
+  //其他登录
+//   hr{
+//       border-width: 1px;
+//   }
+  .left{
+      float: left;
+      width:40%;
+      color:#989797;
+      margin-top:15%;
+  }
+  .right{
+     float: left;
+     width:40%;
+     color:#989797;
+     margin-left:60%;
+     margin-top:-6%;
+  }
+  .other{
+      float: left;
+      margin-left:3%;
+      margin-top:12%;
+      font-size: 16px;
+  }
+  .option{
+      width:100%;
+     
+  }
+  .we{
+      float: left;
+      width:50px;
+      margin-left:20%;
+      margin-top: 80px;
+  }
+ .lang{
+     float: left;
+     width:50px;
+     margin-left:10%;
+     margin-top: 80px;
+ }
+ .ten{
+     float:left;
+     width:50px;
+     margin-left:10%;
+     margin-top: 80px;
+ }
+ .label-md{
+     margin-top:0;
+ }
+ ion-tab{
+     background-color:transparent;
+ }
+ 
+ }

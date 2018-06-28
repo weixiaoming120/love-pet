@@ -1,0 +1,27 @@
+.dark-theme {
+    ion-content {
+      background-color: rgb(201,197,197);
+    }
+  
+    .item {
+      background-color: rgb(201,197,197);
+    }
+  
+    ion-textarea {
+      background-color: rgb(201, 197, 197);
+    }
+  
+    .toolbar-background {
+      background-color: rgb(173, 170, 170);
+    }
+  
+    .tab-button {
+      background-color: #ac1010;
+      ion-icon{
+        color: white;
+      }
+    }
+    .tab-button-text{
+      color: white;
+    }
+  }

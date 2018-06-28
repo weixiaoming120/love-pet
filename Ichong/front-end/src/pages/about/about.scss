@@ -1,0 +1,161 @@
+page-about {
+    ion-title{
+        text-align: center;
+    }
+    .health-bgcolor{
+        background: #f9f9f9;
+    }
+    .health-document{
+        width:100%;
+        height: 130px;
+        background: white;
+    }
+    .health-document-title{
+        height: 20%;
+        padding-left: 5%;
+        padding-top: 5%;
+        font-size: 20px;
+        color:#cf0000;
+        font-weight: 600;
+        font-family: 黑体;
+        ion-icon{
+            float: left;
+        }
+        span{
+            float: left;
+        }
+    }
+    .health-document-content{
+        margin-top: 5px;
+        float: left;
+    }
+    .item{
+        width:45%;
+        float: left;
+        margin-left: 3%;
+    }
+    .select-text {
+        overflow: hidden;
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        min-width: 16px;
+        font-size: inherit;
+        text-overflow: inherit;
+        white-space: nowrap;
+    }
+    // .item-md.item-block .item-inner {
+    //     border-bottom: 0px solid #dedede;
+    // }
+    .health-menu{
+       height: 90px;
+       background: white;
+       margin-top: 2%;
+    }
+    .health-btn{
+        width: 45%;
+        height: 60px;
+        border-radius: 25px;
+        margin-left: 3%;
+        margin-top: 2%;
+        border: 1px solid lightgray;
+        background-color: lightgoldenrodyellow;
+        font-size: 18px;
+        color:#cf0000;
+        font-weight: 600;
+        padding-left: 10px;
+    }
+    .ion{
+        margin-left: 15px;
+        margin-right: 8px;
+    }
+
+    .health-record{
+        width: 100%;
+        height:60px;
+        background: white;
+        margin-top: 2%;
+    }
+    .health-note{
+        border:1px solid lightgray;
+        height: 45%;
+        width:80%;
+        margin-left: 10%;
+        background: lightgoldenrodyellow;
+        border-radius: 25%;
+    }
+    .note-date-div{
+        margin-left: 38%;
+        margin-top: 5px;
+        font-size: 15px;
+    }
+    ul{
+        padding:0 0 0 0 ;
+    }
+    ul li{
+        list-style: none;
+    }
+    .note-li{
+      font-size: 18px;
+      font-family: 楷体;
+      label{
+          margin-left: 18px;
+      }
+      textarea{
+        border: 0px;
+        width:80%;
+        height: 40px;
+      }
+      span{
+          height: auto;
+          width: 80%;
+      }
+    }
+    ion-app.md [padding] .scroll-content {
+        padding: 0px;
+    }
+    .about_add{
+        margin-left: 150px;
+        float: left;
+    }
+    .about_1{
+        width: 100%;
+        height: auto;
+        margin: 0;
+        ion-item{
+            width: 100%;
+            margin:0;
+            ion-label{
+                margin-left: 18px;
+            }
+        }
+    }
+    .about_item{
+        // margin-top: 16px;
+        height: auto;
+    }
+    .about_item ion-item{
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 15px;
+        padding-left: 0;
+        span{
+            width: 100%;
+            float: left;
+            padding: 8px 10px 2px 18px;
+            font-size: 18px;
+        }
+    }
+    .about_item ion-item span:first-child{
+        color: #803636;
+        font-weight: bold;
+    }
+    .about_item ion-item span:last-child{
+        margin-bottom: 10px;
+    }
+    
+}
+// 全局 content边距
+
+

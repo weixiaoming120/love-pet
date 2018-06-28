@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-navbar color="primary">
+      <ion-title>找回密码</ion-title>
+      <ion-buttons end>
+        <button ion-button icon-only>
+            <ion-icon></ion-icon>
+        </button>
+      </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div class="each">
+        <ion-item class="nick">
+           <ion-icon name="person" color="major"></ion-icon>
+           <input class="nickname" type="text" placeholder="请输入昵称">
+        </ion-item>
+
+        <ion-item class="phone">
+            <ion-icon name="phone-portrait" color="major"></ion-icon>
+            <input class="phonenumber" type="number" placeholder="请输入手机号">
+        </ion-item>
+
+        <ion-item class="code">
+            <ion-icon name="ios-create" color="major"></ion-icon>
+            <input class="authcode" type="text" placeholder="验证码">
+            <button ion-button  class="obtain" (click)="obtain()">
+                获取验证码
+            </button>
+        </ion-item>
+
+
+        <ion-item class="pass">
+            <ion-icon name="lock" color="major"></ion-icon>
+            <input class="password" type="password" placeholder="请输入密码">
+        </ion-item>
+
+        <ion-item class="repass">
+            <ion-icon name="lock" color="major"></ion-icon>
+            <input class="repsw" type="password" placeholder="确认密码">
+        </ion-item>
+
+  </div>
+  
+  <button ion-button round color="major" class="confirm" (click)="conFirm()">
+       确认
+  </button>
+  
+  
+</ion-content>

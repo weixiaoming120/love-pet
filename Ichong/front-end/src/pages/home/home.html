@@ -1,0 +1,54 @@
+<ion-header  >
+  <ion-navbar hideBackButton="false" color = "primary">   
+    <ion-title style="text-align:center">日常</ion-title>
+    <!-- <button menuToggle ion-button>List</button> -->
+
+  </ion-navbar>
+</ion-header>
+
+
+<!-- <ion-menu [content]="mycontent" type="overlay">
+  <ion-header>
+     <ion-navbar color="yel"><span class="name">资芽APP</span>
+    </ion-navbar>
+   </ion-header>
+   <ion-content>
+     <ion-list class="panel">        
+       <ion-item (click)="close()">Close Menu</ion-item>
+     </ion-list>
+   </ion-content>
+</ion-menu>
+<ion-nav #mycontent ></ion-nav> -->
+
+<ion-content class="minebg">
+  <ion-slides class="home_slide" autoplay="3000" loop=true pager=true>
+    <ion-slide>
+      <img src="assets/imgs/headimg.png">
+    </ion-slide>
+    <ion-slide>
+      <img src="assets/imgs/content.png">      
+    </ion-slide>
+  </ion-slides>
+  <ion-list>
+    <ion-item>
+      <b style="color:#cf0000;">快来添加新的日常吧~ </b>
+    </ion-item>
+  </ion-list>
+
+  <ion-list class="home_list" *ngFor="let item of list;let i=index">
+    <ion-item class="home_add">
+        <img class="head_img" src="{{pic}}">
+        <h3 class="home_name">{{username}}</h3>
+        <span class="home_time">{{item.date}}</span>
+        <div class="del"><ion-icon name="trash" color="primary" (click)="del(item,i)"></ion-icon></div>     
+    </ion-item>
+    <ion-item class="home_add">    
+      <p>{{item.pubcontent}}</p>
+      <img src="{{item.pubpic}}" class="conimg">
+    </ion-item>
+
+  </ion-list>
+
+
+</ion-content>
+

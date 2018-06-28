@@ -1,0 +1,70 @@
+page-general {
+    ion-title{
+        margin-left: 28%;
+    }
+    .pethealthbg{
+        background: #f9f9f9;
+    }
+    ul {
+        padding :0 0 0  0;
+    }
+    ul li{
+        list-style: none;
+    }
+   //  .pethealth-div{
+   //      height: ;
+   //  }
+   .pethealth-ul{
+       height: 700px;
+   }
+   .pethealth-li{
+       border:1px solid lightgray;
+       height: 130px;
+       background: white;
+       margin-top: 2%;
+       width:100%;
+   }
+   .pethealth-img{
+       float: left;
+       margin-left: 1%;
+       margin-top: 4%;
+       height: 80%;
+       width: 30%;
+       img{
+           width: 100%;
+           height: 100%;
+       }
+   }
+   .pethealth-content{
+       float: left;
+       width: 60%;
+       margin-left: 5%;
+       margin-top: 2%;
+       height: 100%;
+   }
+   .pet-title{
+       font-weight: bolder;
+       font-size: 18px;
+       height: 30%；
+   }
+   .pet-content{
+       color:gray;
+       overflow: hidden;
+       text-overflow: ellipsis;
+       white-space: nowrap; 
+       
+   }
+   .pet-date{
+       float: right;
+       margin-top:20px;
+       overflow: hidden;
+    //    text-overflow: ellipsis;
+       white-space: nowrap; 
+       width: 70px;
+   }
+   .toolbar-title{
+    padding: 0;
+    
+}
+
+   }

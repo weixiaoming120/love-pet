@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title style="margin-left:85px;">
+       疫苗接种
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only  (click)="addym()" class="hbtn">
+         添加
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="yimiaobg"> 
+ <div class="yimiao">
+   <ul class="yimiao-ul">
+     <li class="yimiao-li" *ngFor="let item of list;let i=index">
+        <div class="ym1"><span>{{item.vaccinename}}</span><br/><span>{{item.petage}}</span></div>
+        <div class="ym2"><button (click)="achieve()" class="wei">{{item.status}}</button></div>
+     </li>
+   </ul>
+ </div>
+</ion-content>

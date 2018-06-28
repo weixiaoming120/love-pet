@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-navbar class="minehea" color="primary">
+    <ion-title>我的宠物</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only>
+          <ion-icon></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="minebg">
+  <ion-list style="margin-top:8px;">
+    <ion-item-sliding  *ngFor="let item of list;let i=index;">
+      <ion-item (click)="change(item)"  class="sel">
+        <!-- <input type="checkbox"  [(ngModel)]="agree" (ionChange)="updateAgree()"> -->
+        <!-- <ion-checkbox [(ngModel)]="agree" (ionChange)="updateAgree()" class="agree_check"></ion-checkbox> -->
+        
+        <ul>
+          <li>
+            <img src="{{item.petpic}}">
+            <ul class="pet_name">
+              <li>
+                <b>{{item.petname}}</b>
+                <p style="width:200px;float:left;margin-top:15px;">
+                  <span style="font-size:16px;font-weight:bold; color:#cf0000">{{item.petsex}}</span>
+                  <font>&nbsp; {{item.petdate}}&nbsp;&nbsp;years old~</font>
+                </p>               
+              </li>
+            </ul>
+          </li>
+        </ul>
+    </ion-item>
+      <ion-item-options>
+        <button ion-button expandable  (click)="del(item,i)">Delete</button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>

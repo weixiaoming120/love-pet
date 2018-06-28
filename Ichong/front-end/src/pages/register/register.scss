@@ -1,0 +1,93 @@
+page-register {
+    ion-title{
+        text-align: center;
+    }
+    //输入项
+    .label-md{
+        margin:0;
+    }
+    .item-md{
+        padding:0;
+    }
+    .each{
+        width:80%;
+        height:55%;
+        margin-left:10%;
+        margin-top:5%;
+    }
+    //item边框
+    .item-md.item-block .item-inner {
+        border:0;
+    }
+    ion-icon{
+        font-size:3rem;
+    }
+    .icon-md-major {
+        float: left;
+        color: #f03b44;
+    }
+    input{
+        height:35px;
+        width:85%;
+        text-indent:7px;
+        border-width:2px;
+        margin-left:6%;
+        border-radius:10px;
+    }
+    //昵称
+    .nickname{
+       width:85%;
+       border:1px solid gray;
+    }
+    //手机号
+    .phonenumber{
+         height:35px;
+         text-indent:7px;
+         border-width:2px;
+         margin-left:7.5%;
+         border:1px solid gray;
+    }
+    //验证码
+    .authcode{
+         height:35px;
+         width:50%;
+         text-indent:7px;
+         border-width:2px;
+         margin-left:5.5%;
+         border:1px solid gray;
+    }
+    .item-md .item-button {
+        padding-top:0.3em;
+         height:38px;
+         width:30%;
+         font-size: 1.3rem;
+    }
+    .acquire{
+        margin-top:-5%;
+        padding-top:5px;
+    }
+   
+    //密码
+    .password{
+     border:1px solid gray
+    }
+    .repsw{
+        border:1px solid gray;
+    }
+    ion-checkbox{
+        float: left;
+        margin-left:15%; 
+        margin-top:-16px;
+    }
+    .agree{
+        margin-left:22%; 
+    }
+    .user{
+        color:#488aff;
+    }
+    .next{
+        width:80%;
+        margin-left: 10%;
+        margin-top:5%;
+    }
+}

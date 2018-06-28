@@ -1,0 +1,38 @@
+
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>添加疫苗</ion-title>
+    <ion-buttons end>
+        <button ion-button icon-only class="hbtn">
+            <ion-icon ></ion-icon>
+        </button>
+     </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-list>
+        <ion-item>
+          <ion-label color="black">疫苗种类：</ion-label>
+          <ion-input placeholder="四联" [(ngModel)]="name"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label color="black">宠物年龄：</ion-label>
+            <ion-input placeholder="岁" [(ngModel)]="time"></ion-input>
+        </ion-item>
+        
+        <ion-item >
+            <ion-label color="black" class="">接种状态：</ion-label>
+              <ion-select interface="popover" [(ngModel)]="status">
+                  <ion-option>未接种</ion-option>
+                  <ion-option>已接种</ion-option>
+              </ion-select>           
+        </ion-item> 
+        <button class="btn" round ion-button (click)="add()">添加</button>
+    </ion-list>
+    
+</ion-content>
+

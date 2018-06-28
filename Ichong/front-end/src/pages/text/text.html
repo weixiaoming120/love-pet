@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-navbar color="primary">
+      <ion-title>新日常</ion-title>
+      <ion-buttons end style="width:55px;">
+          <button ion-button icon-only class="btn" (click)="daily()">发布</button>
+      </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content class="minebg">
+  <ion-input type="textarea" class="textarea" placeholder="来详细描述一下您的爱宠信息吧... " [(ngModel)]="content"></ion-input>
+  <div class="header-image" tappable>
+    <div style="width:100px;height:100px;background-image:url(assets/imgs/camera.png);background-size:cover;" (click)="presentActionSheet($event)"></div>
+  </div>
+</ion-content>
+

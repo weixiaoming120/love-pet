@@ -1,0 +1,67 @@
+page-home{
+
+    // .bgc{
+    //     background-color: #FCFAFC;
+    // }
+    .home_slide{
+        width: 100%;
+        height: 180px;
+    }
+    .label-md{
+        margin:15px 25px 10px 20px;     
+    }
+    .item-md.item-block .item-inner{
+        padding-right: 0px;
+    }
+    .home_add{       
+        p{
+            float: left;
+            width: 100%;
+            white-space:pre-wrap;
+            margin: 0px 15px 5px 10px;
+            font-size: 18px;
+            font-family: '黑体';
+            letter-spacing: 1px;
+            line-height: 27px;
+        }
+        .conimg{
+            float: left;
+            width: 70%;
+            height: 70%;
+            margin-left: 10px;
+            margin-top: 15px;
+        }
+        .del{          
+            margin-left: 82%;
+            width: 15%;
+            height: 30px;
+            margin-top: 15px;
+            ion-icon{
+                font-size: 21px;  
+                margin-left: 10px;              
+            }
+        }
+       
+    }
+    .head_img{
+        border-radius: 50%;
+        width: 12%;
+        float: left;
+        margin-top: 5px;
+    }
+    .home_time{
+        float: left;
+        margin-left: 25px;
+        margin-top: 8px;
+        font-size: 12px;
+        // padding: 50px 10px 25px 15px;
+    }
+    .home_name{
+        float: left;
+        font-size: 21px;
+        font-weight: bold;
+        margin-left: 25px;
+        margin-top: 5px;
+        width:70%;
+    }
+}

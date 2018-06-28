@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar class="minehea" color="primary">
+    <ion-title>个人信息</ion-title>
+    <ion-buttons end style="margin-right:15px">
+      <button ion-button icon-only (click)="improve()">
+         修改
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="minebg">
+    
+  <ion-list>
+    <img src="{{pic}}" class="profile_img">
+    <!-- <ion-item class="1profile_tou">
+    
+    </ion-item> -->
+    <ion-item class="prifile_name">
+      <ion-label>昵称:<span style="float:right;color:#ccc;">{{username1}}</span></ion-label>
+      <!-- <ion-input>{{username1}}</ion-input> -->
+    </ion-item>
+    <ion-item class="prifile_name">
+      <ion-label>性别:<span style="float:right;color:#ccc;">{{gender}}</span></ion-label>
+      <!-- <span></span> -->
+    </ion-item>
+    <ion-item class="prifile_name">
+      <ion-label>手机号:<span style="float:right;color:#ccc;">{{telephone}}</span></ion-label>
+      <!-- <ion-input style="margin-left:5px;"></ion-input> -->
+    </ion-item>
+    <ion-item class="prifile_name">
+      <ion-label>邮箱:<span style="float:right;color:#ccc;">{{email}}</span></ion-label>
+      <!-- <ion-input></ion-input> -->
+    </ion-item>
+    <ion-item class="prifile_name">
+      <ion-label>简介:<span style="float:right;color:#ccc;">{{introduction}}</span></ion-label>
+      <!-- <ion-input></ion-input> -->
+    </ion-item>
+  </ion-list>
+</ion-content>

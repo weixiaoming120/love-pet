@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>文章</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only class="hbtn">
+          <ion-icon ></ion-icon>
+      </button>
+   </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="pettitlebg">
+  <div class="a">
+    <div class="a1"><h1>{{title}}</h1></div>
+    <div class="a2"><img src="{{pic}}"></div>
+    <div class="a3"><p>&nbsp;&nbsp;{{content}}</p> </div>
+    <ion-icon name="star" color="primary" class="art_ion" (click)="collect()" [ngClass]="{true:'star1',false:'star2'}[f]"></ion-icon>
+    
+    <!-- <div class="a4"> -->
+
+      <!-- <ion-checkbox [(ngModel)]="status" (ionChange)="collect()" class="collect"></ion-checkbox><p>收藏</p> -->
+    <!-- </div> -->
+
+  </div>
+
+  <!-- <div class="b">
+      
+  </div> -->
+</ion-content>
+

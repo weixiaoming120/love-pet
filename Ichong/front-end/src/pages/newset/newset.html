@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar class="minehea" color="primary">
+    <ion-title>消息设置</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only>
+        <ion-icon></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="minebg">
+  <ion-list class="newset">
+    <ion-item>
+      <ion-label>声音</ion-label>
+      <ion-toggle [(ngModel)]="voice"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label>震动</ion-label>
+      <ion-toggle [(ngModel)]="vibrat"></ion-toggle>
+    </ion-item>
+  </ion-list>
+</ion-content>

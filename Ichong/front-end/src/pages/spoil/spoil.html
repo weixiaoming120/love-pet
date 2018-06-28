@@ -1,0 +1,65 @@
+
+<ion-header>
+  <ion-navbar color="primary" class="minehea">
+      <ion-buttons item-start style="float:left; width:68px">
+          <button ion-button icon-only (click)="cityenter()">
+           
+          </button>
+        </ion-buttons> 
+    <ion-title style="text-align:center;">养宠</ion-title>
+    <ion-buttons end style="float:left">
+      <button ion-button icon-only (click)="cityenter()">
+        确认地区
+      </button>
+    </ion-buttons> 
+  </ion-navbar>
+  <ion-list>
+    <ion-item>
+      <ion-icon name="pin" item-start></ion-icon>
+      <ion-label>地点</ion-label>
+      <ion-multi-picker id="spoilcity" item-content [(ngModel)]="spoilcity" [multiPickerColumns]="cityColumns" [cancelText]="'取消'" [doneText]="'完成'"></ion-multi-picker>
+    </ion-item>
+  </ion-list>
+
+  <ion-segment [(ngModel)]="adopt">
+      <ion-segment-button value="jiyang">
+        寄养I宠
+      </ion-segment-button>
+      <ion-segment-button value="daiwo">
+        带我回家
+      </ion-segment-button>
+  </ion-segment>
+</ion-header>
+
+<ion-content class="bg"> 
+  <div  [ngSwitch]="adopt" value="change">
+    <div *ngSwitchCase="'jiyang'">      
+      <ion-list style="margin-top:8px;">
+        <ion-item *ngFor="let item of list;let i=index;">
+          <ion-avatar item-start>
+            <img src="{{item.petshopimage}}">
+          </ion-avatar>
+          <h2>{{item.petshopname}}</h2>
+          <p>地址：{{item.petshopaddress}}</p>
+        </ion-item>
+      </ion-list>
+    </div>
+    <div *ngSwitchCase="'daiwo'">
+      <ion-list class="extra">
+        <ion-item (click)="petdetail(petitem)" *ngFor="let petitem of petlist;let i=index;">
+          <ion-avatar item-start>
+            <img src="{{petitem.petimage}}">
+          </ion-avatar>
+          <h2>{{petitem.petname}}</h2>
+          <p>介绍：{{petitem.petinformation}}</p>
+          <p>联系电话：{{petitem.phone}}</p>
+          <!-- <img class="redarrow" src="assets/imgs/redarrow.png"> -->
+        </ion-item>
+        
+      </ion-list>
+      <button ion-button icon-only (click)="petpublish()" class="writeicon">
+          <ion-icon name="create"></ion-icon>
+      </button>   
+  </div>
+</div>
+</ion-content>
