@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>反馈管理</title>
+    <script src="../../javascripts/adapter.js"></script> <!--rem适配js-->
+    <link rel='stylesheet', href='../../stylesheets/normalize.css'>
+    <link rel='stylesheet', href='../../stylesheets/header.css'>
+    <link rel='stylesheet', href='../../stylesheets/menu.css'>
+    <link rel='stylesheet', href='../../stylesheets/menu1.css'>
+    <link rel='stylesheet', href='../../stylesheets/base.css'>
+    <link rel='stylesheet', href='../../stylesheets/p-system-regular.css'>
+    <link rel='stylesheet', href='../../stylesheets/contend.css'>
+    <link rel='stylesheet', href='../../stylesheets/base1.css'>
+    <link rel='stylesheet', href='../../stylesheets/admin-all.css'>
+    <link rel='stylesheet', href='../../stylesheets/formui.css'>
+
+<style media="screen">
+        .shadow{
+            position:fixed; width:100%; height:100%; background:#000; opacity:0.3; filter:alpha(opacity 30); left:0; top:0;}
+        .mod_dialog{
+            width:450px; height:240px; border:1px solid rgb(243, 137, 137);  background: #f9f9f9; position:fixed; left: 46%; top: 45%;
+            margin-left:-150px; margin-top: -100px;}
+</style>
+
+</head>
+<body>
+    <!--header-->
+    <% include components/top.inc.ejs%>
+    <!--menu-->
+    <% include components/menu.inc.ejs%>
+   
+    <!-- 内容区 -->
+     <div class="contend" style="background-color:#f9f9f9"> 
+
+        <h2 style="margin-left:5%; margin-top:1%; font-size:1.3em;color:#cf0000;font-weight:bolder;">反馈信息</h2>
+        <!-- tianjia -->
+        <!-- <div style="width:90%;height:20%;margin-left:5%;margin-top:1.5%;">
+                <form action="?" method="post">   
+                     
+                    <table class="tbform">
+                        <tr>
+                            <td class="tdl">账号</td>
+                            <td>
+                                    <input id="finishTime"  class="ipt" type="text" name="feedback_id" />
+                            </td>
+                            <td class="tdl">反馈类型</td>
+                            <td>
+                                <input id="finishTime"  class="ipt" type="text" name="feedback_type"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdl">状态</td>
+                            <td>
+                                <select size="1" name="state" class="ipt"  >
+                                    <option value="已解决">已解决</option>
+                                    <option value="未解决">未解决</option>
+                                </select>
+                            </td>
+                            <td class="tdl">电话号码</td>
+                            <td>
+                                <input id="finishTime"  class="ipt" type="number" name="phonenumber"/>
+                            </td>
+                        </tr>
+                        <tr>                            
+                            <td class="tdl">电子邮箱 </td>
+                            <td>
+                                <input id="finishTime"  class="ipt" type="email" name="email"/>
+                            </td>
+                        </tr>
+                    </table>   
+                         <input id="finishTime"   type="submit" value="添加" class="add">                       
+                </form>
+        </div>  
+            <br> <hr style="margin-top:12px;" class="system-regular-panel"> -->
+
+        <div class="system-regular-panel" style="margin-top:2%">           
+            <!-- <%=feedback %> -->
+            <table cellspacing="0" cellpadding="3" width="100%">
+                <tr>                                 
+                    <th>账号</th>
+                    <th>反馈类型</th>
+                    <th>状态</th>
+                    <th>手机号码</th>
+                    <th>电子邮箱</th>
+                    <th>操作</th>   
+                </tr>
+
+                    <% for(var i=0;i< feedback.length;i++){ %>
+                    <tr id="row1">
+                        <td><%=feedback[i].feedback_id%></td>
+                        <td><%=feedback[i].feedback_type%></td>
+                        <td><%=feedback[i].state%></td>
+                        <td><%=feedback[i].phonenumber%></td>
+                        <td><%=feedback[i].email%></td>
+                        <td>
+                            <button class="deledi"><a href="?act=del&feedback_id=<%=feedback[i].feedback_id%>" onclick="return confirm('你真的要删吗？')">删除</a></button>
+                            <button class="deledi"><a href="?act=mod&feedback_id=<%=feedback[i].feedback_id%>">修改</a></button>
+                        </td>     
+                    </tr>
+                    <% } %>
+
+            </table>
+        </div>      
+    </div> 
+        
+           
+            
+            <!--修改悬浮框--><!--修改时总有原始id-->
+            <% if(typeof mod_data != 'undefined'){ %>
+            <div class="shadow"></div>                    
+            <div class="mod_dialog">
+                <!-- 修改用的 -->  
+                <form action="?" method="post">
+                    <table style="width:100%;" class="tbform">
+                        <input type="hidden" id="finishTime"  class="ipt" name="mod_id" value="<%=mod_data.feedback_id %>"  />
+                            <tr>
+                                <td class="tdl">账号</td>
+                                <td>
+                                        <input type="text" id="finishTime"  class="ipt" name="feedback_id" value="<%=mod_data.feedback_id%>">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tdl">反馈类型</td>
+                                <td>
+                                        <input type="text" id="finishTime"  class="ipt" name="feedback_type"  value="<%=mod_data.feedback_type%>">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tdl">状态</td>
+                                <td>
+                                    <select size="1" name="state" class="ipt"  >
+                                        <option value="已解决">已解决</option>
+                                        <option value="未解决">未解决</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tdl">电话号码</td>
+                                <td>
+                                        <input type="number" id="finishTime"  class="ipt" name="phonenumber" value="<%=mod_data.phonenumber %>">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tdl">电子邮箱 </td>
+                                <td>
+                                    <input type="text" id="finishTime"  class="ipt" name="email" value="<%=mod_data.email %>">
+                                </td>
+                            </tr>
+                        </table>
+                       
+                        <input id="finishTime"  style="margin-left:65%;"  type="submit" value="修改" class="add">                                      
+                        <a href="/admin/system-manager">
+                             <input id="finishTime" style="margin-left:80%;"   type="button" value="取消" class="add">
+                        </a>
+                       
+                    </form>
+            </div>
+            <% }%>
+                <script src="../../javascripts/menu1.js"></script> <!--控制js-->      
+</body>
+</html>

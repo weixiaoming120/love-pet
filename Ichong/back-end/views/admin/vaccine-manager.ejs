@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style media="screen">
+        .shadow{position: fixed;width: 100%;height: 100%;
+         background:  #f9f9f9;opacity: 0.3; filter: alpha(opacity 30);
+         left: 0;top: 0;}
+        .mod_dialog{width: 450px;height: 240px;border: 1px solid rgb(243, 137, 137);
+        background:  #f9f9f9;  position: fixed;left: 46%;top: 45%;
+        margin-left: -150px;margin-top: -100px;}
+    </style>
+    <title>疫苗接种管理</title>
+    <script src="../../javascripts/adapter.js"></script> <!--rem适配js-->
+    <link rel='stylesheet', href='../../stylesheets/normalize.css'>
+    <link rel='stylesheet', href='../../stylesheets/header.css'>
+    <link rel='stylesheet', href='../../stylesheets/menu.css'>
+    <link rel='stylesheet', href='../../stylesheets/menu1.css'>
+    <link rel='stylesheet', href='../../stylesheets/base.css'>
+    <link rel='stylesheet', href='../../stylesheets/p-system-regular.css'>
+    <link rel='stylesheet', href='../../stylesheets/contend.css'>
+    <link rel='stylesheet', href='../../stylesheets/base1.css'>
+    <link rel='stylesheet', href='../../stylesheets/admin-all.css'>
+    <link rel='stylesheet', href='../../stylesheets/formui.css'>
+</head>
+<body style="background-color:#f9f9f9">
+        <!-- p-system-regular -->
+        <% include components/top.inc.ejs%>
+        <!--menu-->
+        <% include components/menu.inc.ejs%>
+    <!-- 内容区 -->
+        <div class="contend">  
+                <h2 style="margin-left:5%; margin-top:1%; font-size:1.5em; color:#cf0000;">疫苗接种管理</h2>
+                    <!--添加用的 -->
+                    <div style="width:90%;height:20%;margin-left:5%;margin-top:1.5%;">
+                        <form action="?" method="post">   
+                             
+                            <table class="tbform">
+                                <tr>
+                                    <!-- <td class="tdl">ID </td>
+                                    <td>
+                                        <input id="finishTime"  class="ipt" type="text" name="vaccineid" />
+                                    </td> -->
+                                    <td class="tdl">用户名</td>
+                                    <td>
+                                        <input id="finishTime"  class="ipt" type="text" name="username"/>
+                                    </td>
+                                    <td class="tdl">接种情况 </td>
+                                    <td>
+                                        <select size="1" name="status" class="ipt"  >
+                                            <option value="已接种">已接种</option>
+                                            <option value="未接种">未接种</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="tdl">宠物名 </td>
+                                    <td>
+                                        <input id="finishTime"  class="ipt" type="text" name="petname"/>
+                                    </td>
+                                    <td class="tdl">疫苗名称</td>
+                                    <td>
+                                        <input id="finishTime"  class="ipt" type="text" name="vaccinename"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                   
+                                    <td class="tdl">宠物年龄 </td>
+                                    <td colspan="3">
+                                        <input id="finishTime"  class="ipt" type="text" name="petage"/>
+                                    </td>
+                                    
+                                </tr>
+                            </table>   
+                                 <input id="finishTime"   type="submit" value="添加" class="add">                       
+                        </form>
+                    </div>  
+                    <br> <hr style="margin-top:12px;" class="system-regular-panel">                  
+            <div class="system-regular-panel">
+                    <table  cellspacing="0" cellpadding="3" width="100%">
+                        <tr>                           
+                            <th>ID</th>
+                            <th>用户名</th>
+                            <th>接种情况</th> 
+                            <th>宠物名</th>
+                            <th>疫苗名称</th>
+                            <th>宠物年龄</th>
+  
+                            <th>操作</th>  
+                        </tr>
+                        <% for(var i=0;i < vaccine_manager.length;i++){ %>
+                        <tr id="row1">
+                            <td><%=vaccine_manager[i].vaccineid %></td>
+                            <td><%=vaccine_manager[i].username %></td>
+                            <td><%=vaccine_manager[i].status %></td>
+                            <td><%=vaccine_manager[i].petname %></td>
+                            <td><%=vaccine_manager[i].vaccinename %></td>
+                            <td><%=vaccine_manager[i].petage %></td>
+
+                           
+                            <td>
+                                <a href="?act=mod&vaccineid=<%=vaccine_manager[i].vaccineid%>"><button class="deledi">修改</button></a>
+                                <a href="?act=del&vaccineid=<%=vaccine_manager[i].vaccineid%>" onclick="return confirm('您确定要删除数据吗？一旦删除数据无法恢复')"><button class="deledi">删除</button></a>
+                            </td>    
+                        </tr>
+                        <% } %>                                         
+                    </table>
+                </div>      
+        </div>       
+        <% if(typeof mod_data != 'undefined'){ %>
+            <div class="shadow"></div>                    
+        <div class="mod_dialog">
+            <!-- 修改用的 -->  
+            <form action="?" method="post">
+                <table style="width:100%;" class="tbform">
+                    <input type="hidden" id="finishTime"  class="ipt" name="mod_id" value="<%=mod_data.vaccineid %>"  />
+                        <tr>
+                            <td class="tdl">用户名</td>
+                            <td>
+                                    <input type="text" id="finishTime"  class="ipt" name="username" value="<%=mod_data.username %>">
+                            </td>
+                        </tr>
+                        <tr>
+                                <td class="tdl">接种情况 </td>
+                                <td>
+                                    <select size="1" name="status" class="ipt"  >
+                                        <option value="已接种">已接种</option>
+                                        <option value="未接种">未接种</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        <tr>
+                            <td class="tdl">宠物名</td>
+                            <td>
+                                    <input type="text" id="finishTime"  class="ipt" name="petname" value="<%=mod_data.petname %>">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdl">疫苗名称 </td>
+                            <td>
+                                    <input type="text" id="finishTime"  class="ipt" name="vaccinename" value="<%=mod_data.vaccinename %>">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdl">宠物年龄</td>
+                            <td>
+                                    <input type="text" id="finishTime"  class="ipt" name="petage" value="<%=mod_data.petage %>">
+                            </td>
+                        </tr>
+                       
+                    </table>
+                   
+                            <input id="finishTime"  style="margin-left:65%;"  type="submit" value="修改" class="add">                                      
+                            <a href="/admin/vaccine-manager">
+                                <input id="finishTime" style="margin-left:80%;"   type="button" value="取消" class="add">
+                            </a>
+                   
+                </form>
+        </div>
+        <% } %>
+          <script src="../../javascripts/menu1.js"></script> <!--控制js-->       
+</body>
+</html>

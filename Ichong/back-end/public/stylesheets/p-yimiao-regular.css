@@ -1,0 +1,57 @@
+.yimiao-regular-panel{
+	border:1px solid lightgray;
+	width: 90%;
+	height: auto;
+	margin-left: 5%;
+	margin-top: 2%;
+	overflow-y:auto;
+	max-height:350px;
+}
+table{
+	width: 100%;
+	text-align: center;
+	padding-left: 5px;
+	background: white;
+}
+th{
+	border-bottom: 2px solid lightgray;
+	height: 50px;
+	line-height: 50px;	
+}
+table tr td{
+	border-bottom: 1px solid lightgray;
+	height: 50px;
+	line-height: 50px;
+}
+h2{
+	margin-left: 2%;
+	margin-top: 3%;
+	color:#cf0000;
+}
+.yimiao-del{
+	margin-left: 10px;
+	width: 55px;
+	height: 27px;
+	background-color: #6699FF;
+	border-radius: 5px;
+	border: none;
+	color: white;
+}
+.yimiao-alldel{
+	margin-bottom: 10px;
+	border: none;
+	color: white;
+	width: 100px;
+	height: 40px;
+	margin-left: 70%;
+	background-color: #6699FF;
+	border-radius: 5px;
+	margin-top: 20px;
+	position:absolute; 
+	font-size:17px;
+	font-weight:bolder;
+}
+.yimiao-all{
+	margin-top: 20px;
+	margin-left: 70px;
+}

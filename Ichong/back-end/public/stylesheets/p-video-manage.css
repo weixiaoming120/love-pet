@@ -1,0 +1,67 @@
+.video-manage-panel{
+	border:1px solid lightgray;
+	width: 90%;
+	height: auto;
+	margin-left: 5%;
+	margin-top: 2%;
+	background: white;
+	overflow-y:auto;
+	max-height:350px;	
+}
+.row-video{
+	width:95%;
+	margin-top:5%;
+	height:160px;
+}
+.video-col-one{
+	float: left;
+	width:160px;
+	height:auto;
+	margin-left:3%;
+}
+.video-col-one-examine{
+	margin-left: 10px;
+	width: 65px;
+	height: 27px;
+	background-color: #6699FF;
+	border-radius: 5px;
+	border: none;
+	color: white;
+}
+.video-col-one-delete{
+	margin-left: 10px;
+	width: 65px;
+	height: 27px;
+	background-color: #6699FF;
+	border-radius: 5px;
+	border: none;
+	color: white;
+}
+.video-delete{
+	float: left;
+	margin-bottom: 10px;
+	margin-left: 70%;
+	border: none;
+	color: white;
+	width: 100px;
+	height: 40px;
+	background-color: #6699FF;
+	border-radius: 5px;
+	margin-top: 20px;
+	font-size:17px;
+	font-weight:bolder;	
+}
+.video-pass{
+	float: left;
+	margin-bottom: 10px;
+	margin-left: 10px;
+	border: none;
+	color: white;
+	width: 100px;
+	height: 40px;
+	background-color: #6699FF;
+	border-radius: 5px;
+	margin-top: 20px;
+	font-size:17px;
+	font-weight:bolder;	
+}

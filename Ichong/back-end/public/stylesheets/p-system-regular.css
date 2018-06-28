@@ -1,0 +1,50 @@
+.system-regular-panel{
+	border:1px solid lightgray ;
+	width: 90%;
+	height: auto;
+	margin-left: 5%;
+	/* 	 */
+	overflow-y:auto;
+	max-height:350px;
+}
+.adds{
+	margin-left: 5%;
+}
+table{
+	width: 100%;
+	text-align: center;
+	padding-left: 5px;
+	background: white;
+}
+th{
+	border-bottom: 2px solid lightgray;
+	height: 30px;
+	line-height: 10px;	
+}
+table tr td{
+	border-bottom: 1px solid lightgray;
+	height: 30px;
+}
+
+.deledi{
+	margin-left: 10px;
+	width: 30px;
+	height: 20px;
+	background-color: #6699FF;
+	border-radius: 5px;
+	border: none;
+	color: white;
+}
+.add{
+	margin-bottom: 15px;
+	border: none;
+	color: white;
+	width: 50px;
+	height: 25px;
+	margin-left: 85%;
+	background-color: #6699FF;
+	border-radius: 5px;
+	position:absolute; 
+	font-size: 12px;
+	font-weight: bolder;
+}

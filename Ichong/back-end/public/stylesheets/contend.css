@@ -1,0 +1,9 @@
+.contend {
+    position: absolute;
+    left: 220px;
+    top: 70px;
+    bottom: 0;
+    right: 0;
+    box-sizing: border-box;
+    background: #f9f9f9;
+  }

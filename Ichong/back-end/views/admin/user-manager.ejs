@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style media="screen">
+        .shadow{position: fixed;width: 100%;height: 100%;
+         background:  #f9f9f9;opacity: 0.3; filter: alpha(opacity 30);
+         left: 0;top: 0;}
+        .mod_dialog{width: 450px;height: 310px;border: 1px solid rgb(243, 137, 137);
+        background:  #f9f9f9;  position: fixed;left: 46%;top: 45%;
+        margin-left: -150px;margin-top: -100px;}
+    </style>
+    <title>用户管理</title>
+    <script src="../../javascripts/adapter.js"></script> <!--rem适配js-->
+    <link rel='stylesheet', href='../../stylesheets/normalize.css'>
+    <link rel='stylesheet', href='../../stylesheets/header.css'>
+    <link rel='stylesheet', href='../../stylesheets/menu.css'>
+    <link rel='stylesheet', href='../../stylesheets/menu1.css'>
+    <link rel='stylesheet', href='../../stylesheets/base.css'>
+    <link rel='stylesheet', href='../../stylesheets/p-system-regular.css'>
+    <link rel='stylesheet', href='../../stylesheets/contend.css'>
+    <link rel='stylesheet', href='../../stylesheets/base1.css'>
+    <link rel='stylesheet', href='../../stylesheets/admin-all.css'>
+    <link rel='stylesheet', href='../../stylesheets/formui.css'>
+</head>
+<body style="background-color:#f9f9f9">
+        <!-- p-system-regular -->
+    <% include components/top.inc.ejs%>
+    <% include components/menu.inc.ejs%> 
+    <!-- 内容区 -->
+        <div class="contend">  
+                <h2 style="margin-left:5%; margin-top:1%; font-size:1.5em; color:#cf0000;">用户管理</h2>
+                    <!--添加用的 -->
+                    <div style="width:90%;height:20%;margin-left:5%;margin-top:1.5%;">
+                        <form action="?" method="post" enctype="multipart/form-data">   
+                             
+                            <table class="tbform">
+                                <tr>
+                                    <td class="tdl">用户ID</td>
+                                    <td>
+                                    <!-- ！！！！！！！ -->
+                                        <input id="finishTime"  class="ipt" type="text" name="id" />
+                                    </td>
+                                    <td class="tdl">头像</td>
+                                    <td>
+                                         <!-- ！！！！！！！ -->
+                                        <input id="finishTime"  class="ipt" type="file" name="pic"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                     <td class="tdl">用户名 </td>
+                                    <td>
+                                         <!-- ！！！！！！！ -->
+                                        <input id="finishTime"  class="ipt" type="text" name="username"/>
+                                    </td>
+                                    <td class="tdl">性别 </td>
+                                    <td>
+                                        <select size="1" name="gender" class="ipt"  >
+                                            <option value="男">男</option>
+                                            <option value="女">女</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                        <td class="tdl">密码 </td>
+                                        <td >
+                                             <!-- ！！！！！！！ -->
+                                            <input id="finishTime"  class="ipt" type="number" name="password"/>
+                                        </td>
+                                        <td class="tdl">联系方式</td>
+                                        <td>
+                                             <!-- ！！！！！！！ -->
+                                            <input id="finishTime"  class="ipt" type="number" name="telephone"/>
+                                        </td>
+                                      
+                                        
+                                </tr>
+                                <tr>
+                                    <td class="tdl">邮箱 </td>
+                                        <td >
+                                             <!-- ！！！！！！！ -->
+                                            <input id="finishTime"  class="ipt" type="text" name="email"/>
+                                    </td>
+                                    <td class="tdl">介绍</td>
+                                        <td colspan="3">
+                                             <!-- ！！！！！！！ -->
+                                            <input id="finishTime"  class="ipt" type="text" name="introduction"/>
+                                        </td>
+                                </tr>
+                            </table>   
+                                 <input id="finishTime"   type="submit" value="添加" class="add">                       
+                        </form>
+                    </div>  
+                    <br> 
+                    <hr style="margin-top:45px;" class="system-regular-panel">                  
+            <div class="system-regular-panel" style="margin-top:2%;">
+                    <table  cellspacing="0" cellpadding="3" width="100%">
+                         <!-- ！！！！！！！ -->
+                        <tr>                           
+                            <th>用户ID</th>
+                            <th>头像</th>
+                            <th>用户名</th>
+                            <th>性别</th>
+                            <th>联系方式</th>
+                            <th>密码</th>
+                            <th>邮箱</th>
+                            <th>介绍</th>   
+                            <th>操作</th>  
+                        </tr>
+                        <!-- 
+                            var id = req.body.id;
+        var href = req.body.pic;
+        var username = req.body.username;
+        var gender = req.body.gender;
+        var telephone = req.body.telephone;
+        var password = req.body.password;
+        var email = req.body.email;
+        var introduction = req.body.introduction;
+                         -->
+                         <!-- ！！！！！！！ -->
+                        <% for(var i=0;i< user_manager.length;i++){ %>
+                        <tr id="row1">
+                             <!-- ！！！！！！！ -->
+                            <td><%=user_manager[i].id %></td>
+                            <td><img width="32" height="32" src="/upload/<%=user_manager[i].pic %>"></td>
+                            <td><%=user_manager[i].username %></td>
+                            <td><%=user_manager[i].gender %></td>
+                            <td><%=user_manager[i].telephone %></td>
+                            <td><%=user_manager[i].password %></td>
+                            <td><%=user_manager[i].email %></td>
+                            <td><%=user_manager[i].introduction %></td>
+                            <td>
+                                <a href="?act=mod&id=<%=user_manager[i].id%>"><button class="deledi">修改</button></a>
+                                <a href="?act=del&id=<%=user_manager[i].id%>" onclick="return confirm('您确定要删除数据吗？一旦删除数据无法恢复')"><button class="deledi">删除</button></a>
+                            </td>    
+                        </tr>
+                        <% } %>                                         
+                    </table>
+                </div>      
+        </div>       
+        <% if(typeof mod_data != 'undefined'){ %>
+            <div class="shadow"></div>                    
+        <div class="mod_dialog">
+            <!-- 修改用的 -->  
+            <form action="?" method="post" enctype="multipart/form-data">
+                <table style="width:100%;" class="tbform">
+                    <input type="hidden" id="finishTime"  class="ipt" name="mod_id" value="<%=mod_data.id %>"  />
+                        <tr>
+                            <td class="tdl">用户ID</td>
+                            <td>
+                                 <!-- ！！！！！！！ -->
+                                    <input type="text" id="finishTime"  class="ipt" name="id" value="<%=mod_data.id %>">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdl">头像</td>
+                            <td>
+                                 <!-- ！！！！！！！ -->
+                                    <input type="file" id="finishTime"  class="ipt" name="pic" value="<%=mod_data.pic %>">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdl">用户名 </td>
+                            <td>
+                                 <!-- ！！！！！！！ -->
+                                    <input type="text" id="finishTime"  class="ipt" name="username" value="<%=mod_data.username %>">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdl">性别 </td>
+                                    <td>
+                                        <select size="1" name="gender" class="ipt"  >
+                                            <option value="男">男</option>
+                                            <option value="女">女</option>
+                                        </select>
+                                    </td>
+                        </tr>
+                        <tr>
+                            <td class="tdl">联系方式 </td>
+                            <td>
+                                 <!-- ！！！！！！！ -->
+                                    <input type="text" id="finishTime"  class="ipt" name="telephone" value="<%=mod_data.telephone %>">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdl">密码 </td>
+                            <td>
+                                 <!-- ！！！！！！！ -->
+                                    <input type="text" id="finishTime"  class="ipt" name="password" value="<%=mod_data.password %>">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdl">邮箱 </td>
+                            <td colspan="3">
+                                 <!-- ！！！！！！！ -->
+                                    <input type="text" id="finishTime"  class="ipt" name="email" value="<%=mod_data.email %>">
+                            </td>
+                        </tr>
+                        <tr>
+                             <td class="tdl">介绍</td>
+                            <td>
+                                 <!-- ！！！！！！！ -->
+                                    <input type="number" id="finishTime"  class="ipt" name="introduction" value="<%=mod_data.introduction %>">
+                            </td>
+                           
+                        </tr>
+                    </table>
+                   
+                            <input id="finishTime"  style="margin-left:65%;"  type="submit" value="修改" class="add">   
+                             <!-- ！！！！！！！ -->                                   
+                            <a href="/admin/user-manager">
+                                <input id="finishTime" style="margin-left:80%;"   type="button" value="取消" class="add">
+                            </a>
+                   
+                </form>
+        </div>
+        <% } %>
+          <script src="../../javascripts/menu1.js"></script> <!--控制js-->       
+</body>
+</html>

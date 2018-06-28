@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style media="screen">
+        .shadow{position: fixed;width: 100%;height: 100%;
+         background:  #f9f9f9;opacity: 0.3; filter: alpha(opacity 30);
+         left: 0;top: 0;}
+        .mod_dialog{width: 450px;height: 240px;border: 1px solid rgb(243, 137, 137);
+        background:  #f9f9f9;  position: fixed;left: 46%;top: 45%;
+        margin-left: -150px;margin-top: -100px;}
+    </style>
+    <title>用户管理</title>
+    <script src="../../javascripts/adapter.js"></script> <!--rem适配js-->
+    <link rel='stylesheet', href='../../stylesheets/normalize.css'>
+    <link rel='stylesheet', href='../../stylesheets/header.css'>
+    <link rel='stylesheet', href='../../stylesheets/menu.css'>
+    <link rel='stylesheet', href='../../stylesheets/menu1.css'>
+    <link rel='stylesheet', href='../../stylesheets/base.css'>
+    <link rel='stylesheet', href='../../stylesheets/p-system-regular.css'>
+    <link rel='stylesheet', href='../../stylesheets/contend.css'>
+    <link rel='stylesheet', href='../../stylesheets/base1.css'>
+    <link rel='stylesheet', href='../../stylesheets/admin-all.css'>
+    <link rel='stylesheet', href='../../stylesheets/formui.css'>
+</head>
+<body style="background-color:#f9f9f9">
+        <!-- p-system-regular -->
+    <% include components/top.inc.ejs%>
+    <% include components/menu.inc.ejs%> 
+    <!-- 内容区 -->
+        <div class="contend">  
+                <h2 style="margin-left:5%; margin-top:1%; font-size:1.5em; color:#cf0000;">文章管理</h2>
+                    <!--添加用的 -->
+                    <div style="width:90%;height:20%;margin-left:5%;margin-top:1.5%;">
+                        <form action="?" method="post" enctype="multipart/form-data">   
+                             
+                            <table class="tbform">
+                                <tr>
+                                    <td class="tdl">ID</td>
+                                    <td>
+                                    <!-- ！！！！！！！ -->
+                                        <input id="finishTime"  class="ipt" type="text" name="articalid" />
+                                    </td>
+                                    <td class="tdl">推荐图</td>
+                                    <td>
+                                         <!-- ！！！！！！！ -->
+                                        <input id="finishTime"  class="ipt" type="file" name="pic"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                     <td class="tdl">标题 </td>
+                                    <td>
+                                         <!-- ！！！！！！！ -->
+                                        <input id="finishTime"  class="ipt" type="text" name="title"/>
+                                    </td>
+                                    <td class="tdl">内容 </td>
+                                    <td>
+                                         <!-- ！！！！！！！ -->
+                                            <input id="finishTime"  class="ipt" type="text" name="content" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                        <td class="tdl">更新时间</td>
+                                        <td>
+                                             <!-- ！！！！！！！ -->
+                                            <input id="finishTime"  class="ipt" type="data" name="publishtime"/>
+                                        </td>
+                                </tr>
+                            </table>   
+                                 <input id="finishTime"   type="submit" value="添加" class="add">                       
+                        </form>
+                    </div>  
+                    <br> <hr style="margin-top:12px;" class="system-regular-panel">                  
+            <div class="system-regular-panel">
+                    <table  cellspacing="0" cellpadding="3" width="100%">
+                         <!-- ！！！！！！！ -->
+                        <tr>                           
+                            <th>ID</th>
+                            <th>推荐图</th>
+                            <th>标题</th>
+                            <th>内容</th>
+                            <th>更新时间</th> 
+                            <th>操作</th>  
+                        </tr>
+                         <!-- ！！！！！！！ -->
+                        <% for(var i=0;i< artical_manager.length;i++){ %>
+                        <tr id="row1">
+                             <!-- ！！！！！！！ -->
+                            <td><%=artical_manager[i].articalid %></td>
+                            <td><img width="80" height="80" src="/upload/<%=artical_manager[i].pic %>"></td>
+                            <td><%=artical_manager[i].title %></td>
+                            <td><%=artical_manager[i].content %></td>
+                            <td><%=artical_manager[i].publishtime %></td>
+                            <td>
+                                <a href="?act=mod&articalid=<%=artical_manager[i].articalid%>"><button class="deledi">修改</button></a>
+                                <a href="?act=del&articalid=<%=artical_manager[i].articalid%>" onclick="return confirm('您确定要删除数据吗？一旦删除数据无法恢复')"><button class="deledi">删除</button></a>
+                            </td>    
+                        </tr>
+                        <% } %>                                         
+                    </table>
+                </div>      
+        </div>       
+        <% if(typeof mod_data != 'undefined'){ %>
+            <div class="shadow"></div>                    
+        <div class="mod_dialog">
+            <!-- 修改用的 -->  
+            <form action="?" method="post" enctype="multipart/form-data">
+                <table style="width:100%;" class="tbform">
+                    <input type="hidden" id="finishTime"  class="ipt" name="mod_idd" value="<%=mod_data.articalid %>"  />
+                        <tr>
+                            <td class="tdl">ID</td>
+                            <td>
+                                 <!-- ！！！！！！！ -->
+                                    <input type="text" id="finishTime"  class="ipt" name="articalid" value="<%=mod_data.articalid %>">
+                            </td>
+                        </tr>
+                        <tr>
+                                <td class="tdl">推荐图 </td>
+                                <td>
+                                     <!-- ！！！！！！！ -->
+                                        <input type="file" id="finishTime"  class="ipt" name="pic" value="<%=mod_data.pic %>">
+                                </td>
+                            </tr>
+                        <tr>
+                            <td class="tdl">标题 </td>
+                            <td>
+                                 <!-- ！！！！！！！ -->
+                                    <input type="text" id="finishTime"  class="ipt" name="title" value="<%=mod_data.title %>">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdl">内容 </td>
+                            <td>
+                                 <!-- ！！！！！！！ -->
+                                    <input type="text" id="finishTime"  class="ipt" name="content" value="<%=mod_data.content %>">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdl">更新时间 </td>
+                            <td colspan="3">
+                                 <!-- ！！！！！！！ -->
+                                    <input type="date" id="finishTime"  class="ipt" name="publishtime" value="<%=mod_data.publishtime %>">
+                            </td>
+                        </tr>
+                    </table>
+                            <input id="finishTime"  style="margin-left:65%;"  type="submit" value="保存" class="add">   
+                             <!-- ！！！！！！！ -->                                   
+                            <a href="/admin/artical-manager">
+                                <input id="finishTime" style="margin-left:80%;"   type="button" value="取消" class="add">
+                            </a>     
+                </form>
+        </div>
+        <% } %>
+          <script src="../../javascripts/menu1.js"></script> <!--控制js-->       
+</body>
+</html>

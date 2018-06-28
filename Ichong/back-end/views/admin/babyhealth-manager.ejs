@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style media="screen">
+        .shadow{position: fixed;width: 100%;height: 100%;
+         background:  #f9f9f9;opacity: 0.3; filter: alpha(opacity 30);
+         left: 0;top: 0;}
+        .mod_dialog{width: 450px;height: 440px;border: 1px solid rgb(243, 137, 137);
+        background:  #f9f9f9;  position: fixed;left: 46%;top: 34%;
+        margin-left: -150px;margin-top: -100px;}
+    </style>
+    <title>宠物健康管理</title>
+    <script src="../../javascripts/adapter.js"></script> <!--rem适配js-->
+    <link rel='stylesheet', href='../../stylesheets/normalize.css'>
+    <link rel='stylesheet', href='../../stylesheets/header.css'>
+    <link rel='stylesheet', href='../../stylesheets/menu.css'>
+    <link rel='stylesheet', href='../../stylesheets/menu1.css'>
+    <link rel='stylesheet', href='../../stylesheets/base.css'>
+    <link rel='stylesheet', href='../../stylesheets/p-system-regular.css'>
+    <link rel='stylesheet', href='../../stylesheets/contend.css'>
+    <link rel='stylesheet', href='../../stylesheets/base1.css'>
+    <link rel='stylesheet', href='../../stylesheets/admin-all.css'>
+    <link rel='stylesheet', href='../../stylesheets/formui.css'>
+</head>
+<body style="background-color:#f9f9f9">
+        <!-- p-system-regular -->
+    <% include components/top.inc.ejs%>
+    <% include components/menu.inc.ejs%> 
+    <!-- 内容区 -->
+        <div class="contend">  
+                <h2 style="margin-left:5%; margin-top:1%; font-size:1.5em; color:#cf0000;">宠物健康管理</h2>
+                    <!--添加用的 -->
+                    <div style="width:90%;height:26%;margin-left:5%;margin-top:1.5%;">
+                        <form action="?" method="post" enctype="multipart/form-data">                                
+                            <table class="tbform">
+                                <tr>
+                                    <td class="tdl">id</td>
+                                    <td>
+                                    <!-- ！！！！！！！ -->
+                                        <input id="finishTime"  class="ipt" type="text" name="id" />
+                                    </td>
+                                    <td class="tdl">用户ID</td>
+                                    <td>
+                                         <!-- ！！！！！！！ -->
+                                        <input id="finishTime"  class="ipt" type="text" name="userid"/>
+                                    </td>
+                                    <td class="tdl">宠物头像</td>
+                                    <td>
+                                    <!-- ！！！！！！！ -->
+                                        <input id="finishTime"  class="ipt" type="file" name="href" />
+                                    </td>
+                                   
+                                     <td class="tdl">宠物名 </td>
+                                    <td>
+                                         <!-- ！！！！！！！ -->
+                                        <input id="finishTime"  class="ipt" type="text" name="babyname"/>
+                                    </td>
+                                    
+                                </tr>
+                                <tr>
+                                    
+                                    <td class="tdl">身高 </td>
+                                    <td>
+                                         <!-- ！！！！！！！ -->
+                                            <input id="finishTime"  class="ipt" type="number" name="height" />
+                                    </td>
+                                    <td class="tdl">体重</td>
+                                        <td>
+                                             <!-- ！！！！！！！ -->
+                                            <input id="finishTime"  class="ipt" type="number" name="weight"/>
+                                        </td>
+                                        <td class="tdl">体型</td>
+                                    <td>
+                                         <!-- ！！！！！！！ -->
+                                        <input id="finishTime"  class="ipt" type="text" name="bodytype"/>
+                                    </td>
+                                    <td class="tdl">活动</td>
+                                    <td>
+                                        <!-- ！！！！！！！ -->
+                                        <input id="finishTime"  class="ipt" type="text" name="activity"/>
+                                    </td> 
+                                        
+                               </tr>
+                                <tr>
+                                    <td class="tdl">年龄 </td>
+                                    <td colspan="3">
+                                         <!-- ！！！！！！！ -->
+                                        <input id="finishTime"  class="ipt" type="number" name="age"/>
+                                    </td>
+                                        <td class="tdl">吃食 </td>
+                                        <td colspan="3">
+                                             <!-- ！！！！！！！ -->
+                                            <input id="finishTime"  class="ipt" type="text" name="food"/>
+                                        </td>
+                                        
+                                </tr>
+                                <tr>
+                                               
+                                    <td class="tdl">排便数 </td>
+                                    <td colspan="3">
+                                        <!-- ！！！！！！！ -->
+                                        <input id="finishTime"  class="ipt" type="number" name="defecationnumber"/>
+                                    </td>                  
+                                    <td class="tdl">其他活动 </td>
+                                    <td colspan="3">
+                                        <!-- ！！！！！！！ -->
+                                        <input id="finishTime"  class="ipt" type="number" name="other"/>
+                                    </td>
+                                </tr>
+                            </table>   
+                                 <input id="finishTime"   type="submit" value="添加" class="add">                       
+                        </form>
+                    </div>  
+                    <br> <hr style="margin-top:12px;" class="system-regular-panel">                  
+            <div class="system-regular-panel">
+                    <table  cellspacing="0" cellpadding="3" width="100%">
+                         <!-- ！！！！！！！ -->
+                        <tr>                           
+                            <th>id</th>
+                            <th>宠物头像</th>
+                            <th>用户ID</th>
+                            <th>宠物名</th>
+                            <th>身高</th>
+                            <th>体重</th>   
+                            <th>年龄</th>
+                            <th>体型</th>
+                            <th>吃食</th>   
+                            <th>活动</th> 
+                            <th>排便数</th>    
+                            <th>其他活动</th>
+                            <th>操作</th>
+                        </tr>
+                         <!-- ！！！！！！！ -->
+                        <% for(var i=0;i< babyhealth_manager.length;i++){ %>
+                        <tr id="row1">
+                             <!-- ！！！！！！！ -->
+                            <td><%=babyhealth_manager[i].id %></td>
+                            <td><img width="32" height="32" src="/upload/<%=babyhealth_manager[i].href %>"></td>
+                            <td><%=babyhealth_manager[i].userid %></td>
+                            <td><%=babyhealth_manager[i].babyname %></td>
+                            <td><%=babyhealth_manager[i].height %></td>
+                            <td><%=babyhealth_manager[i].weight %></td>
+                            <td><%=babyhealth_manager[i].age %></td>
+                            <td><%=babyhealth_manager[i].bodytype %></td>
+                            <td><%=babyhealth_manager[i].food %></td>
+                            <td><%=babyhealth_manager[i].activity %></td>
+                            <td><%=babyhealth_manager[i].defecationnumber %></td>
+                            <td><%=babyhealth_manager[i].other %></td>
+                            <td>
+                                <a href="?act=mod&id=<%=babyhealth_manager[i].id%>"><button class="deledi">修改</button></a>
+                                <a href="?act=del&id=<%=babyhealth_manager[i].id%>" onclick="return confirm('您确定要删除数据吗？一旦删除数据无法恢复')"><button class="deledi">删除</button></a>
+                            </td>    
+                        </tr>
+                        <% } %>                                         
+                    </table>
+            </div>      
+        </div>       
+        <% if(typeof mod_data != 'undefined'){ %>
+        <div class="shadow"></div>                    
+        <div class="mod_dialog">
+            <!-- 修改用的 -->  
+            <form action="?" method="post" enctype="multipart/form-data">
+                <table style="width:100%;" class="tbform">
+                    <input type="hidden" id="finishTime"  class="ipt" name="mod_id" value="<%=mod_data.id %>"  />
+                        <tr>
+                            <td class="tdl">id</td>
+                            <td>
+                                 <!-- ！！！！！！！ -->
+                                    <input type="text" id="finishTime"  class="ipt" name="id" value="<%=mod_data.id %>">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdl">用户ID </td>
+                            <td>
+                                 <!-- ！！！！！！！ -->
+                                    <input type="text" id="finishTime"  class="ipt" name="userid" value="<%=mod_data.userid %>">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdl">宠物名 </td>
+                            <td>
+                                 <!-- ！！！！！！！ -->
+                                    <input type="text" id="finishTime"  class="ipt" name="babyname" value="<%=mod_data.babyname %>">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdl">身高 </td>
+                            <td colspan="3">
+                                 <!-- ！！！！！！！ -->
+                                    <input type="text" id="finishTime"  class="ipt" name="height" value="<%=mod_data.height %>">
+                            </td>
+                        </tr>
+                        <tr>
+                             <td class="tdl">体重</td>
+                            <td>
+                                 <!-- ！！！！！！！ -->
+                                    <input type="number" id="finishTime"  class="ipt" name="weight" value="<%=mod_data.weight %>">
+                            </td>
+                           
+                        </tr>
+                        <tr>
+                             <td class="tdl">年龄</td>
+                            <td>
+                                 <!-- ！！！！！！！ -->
+                                    <input type="number" id="finishTime"  class="ipt" name="age" value="<%=mod_data.age %>">
+                            </td>
+                           
+                        </tr>
+                        <tr>
+                             <td class="tdl">体型</td>
+                            <td>
+                                 <!-- ！！！！！！！ -->
+                                    <input type="number" id="finishTime"  class="ipt" name="bodytype" value="<%=mod_data.bodytype %>">
+                            </td>
+                           
+                        </tr>
+                        <tr>
+                             <td class="tdl">吃食</td>
+                            <td>
+                                 <!-- ！！！！！！！ -->
+                                    <input type="number" id="finishTime"  class="ipt" name="food" value="<%=mod_data.food %>">
+                            </td>
+                           
+                        </tr>
+                        <tr>
+                             <td class="tdl">活动</td>
+                            <td>
+                                 <!-- ！！！！！！！ -->
+                                    <input type="number" id="finishTime"  class="ipt" name="activity" value="<%=mod_data.activity %>">
+                            </td>
+                           
+                        </tr>
+                        <tr>
+                            <td class="tdl">排便数</td>
+                           <td>
+                                <!-- ！！！！！！！ -->
+                                   <input type="number" id="finishTime"  class="ipt" name="defecationnumber" value="<%=mod_data.defecationnumber %>">
+                           </td>
+                          
+                       </tr>
+                        <tr>
+                             <td class="tdl">其他活动</td>
+                            <td>
+                                 <!-- ！！！！！！！ -->
+                                    <input type="number" id="finishTime"  class="ipt" name="other" value="<%=mod_data.other %>">
+                            </td>
+                           
+                        </tr>
+                    </table>
+                   
+                            <input id="finishTime"  style="margin-left:65%;"  type="submit" value="修改" class="add">   
+                             <!-- ！！！！！！！ -->                                   
+                            <a href="/admin/babyhealth-manager">
+                                <input id="finishTime" style="margin-left:80%;"   type="button" value="取消" class="add">
+                            </a>
+                   
+                </form>
+        </div>
+        <% } %>
+          <script src="../../javascripts/menu1.js"></script> <!--控制js-->       
+</body>
+</html>
