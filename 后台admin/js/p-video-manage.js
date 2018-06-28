@@ -1,27 +1,27 @@
-var $videoManagePanel = function() {
+var $videoManagePanel = (function() {
   var $videoMagDOM = $(''
       +'<h2>视频管理</h2>'
        + '<div class="video-manage-panel">'
            +'<div class="row-video">'
-                +'<div class="video-col-one" id="div1">'
+                +'<div class="video-col-one">'
                     +'<img src="image/pic.png">'
                     +'<button class="video-col-one-examine">审查</button>'
-                    +'<button class="video-col-one-delete" onclick="clickdel(`div1`)">删除</button>'
+                    +'<button class="video-col-one-delete">删除</button>'
                 +'</div>'
-                +'<div class="video-col-one" id="div2">'
+                +'<div class="video-col-one">'
                     +'<img src="image/pic.png">'
                     +'<button class="video-col-one-examine">审查</button>'
-                    +'<button class="video-col-one-delete" onclick="clickdel(`div2`)">删除</button>'
+                    +'<button class="video-col-one-delete">删除</button>'
                 +'</div>'
-                +'<div class="video-col-one" id="div3">'
+                +'<div class="video-col-one">'
                     +'<img src="image/pic.png">'
                     +'<button class="video-col-one-examine">审查</button>'
-                    +'<button class="video-col-one-delete" onclick="clickdel(`div3`)">删除</button>'
+                    +'<button class="video-col-one-delete">删除</button>'
                 +'</div>'
-                +'<div class="video-col-one" id="div4">'
+                +'<div class="video-col-one">'
                     +'<img src="image/pic.png">'
                     +'<button class="video-col-one-examine">审查</button>'
-                    +'<button class="video-col-one-delete" onclick="clickdel(`div4`)">删除</button>'
+                    +'<button class="video-col-one-delete">删除</button>'
                 +'</div>'
            +'</div>'
        + '</div>'
@@ -37,7 +37,4 @@ var $videoManagePanel = function() {
   }
 
   return {show: show};
-}();
-function clickdel(id){
-      document.getElementById(id).parentNode.removeChild(document.getElementById(id));
- }
+})();

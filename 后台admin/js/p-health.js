@@ -18,8 +18,8 @@ var $healthPanel = function() {
       +'<th>其他活动</th>' 
       +'<th>操作</th>'  
       +'</tr>'
-      +'<tr id="row1">'
-      +'<td><input type="checkbox" name="check"></td>'
+      +'<tr>'
+      +'<td><input type="checkbox"></td>'
       +'<td><img src="image/6.jpeg" class="helimg"></td>'
       +'<td>22334</td>'
       +'<td>xixi</td>'
@@ -31,10 +31,10 @@ var $healthPanel = function() {
       +'<td>遛弯</td>'
       +'<td>2</td>'
       +'<td>XXXXX</td>'
-      +'<td><button class="deledi" onclick="clickdel(`row1`)">删除</button><button class="deledi">编辑</button></td>'      
+      +'<td><button class="deledi">删除</button><button class="deledi">编辑</button></td>'      
       +'</tr>'
-      +'<tr id="row2">'
-      +'<td><input type="checkbox" name="check"></td>'
+      +'<tr>'
+      +'<td><input type="checkbox"></td>'
       +'<td><img src="image/6.jpeg" class="helimg"></td>'
       +'<td>22334</td>'
       +'<td>xixi</td>'
@@ -46,10 +46,10 @@ var $healthPanel = function() {
       +'<td>遛弯</td>'
       +'<td>2</td>'
       +'<td>XXXXX</td>'
-      +'<td><button class="deledi" onclick="clickdel(`row2`)">删除</button><button class="deledi">编辑</button></td>'      
+      +'<td><button class="deledi">删除</button><button class="deledi">编辑</button></td>'      
       +'</tr>'
-      +'<tr id="row3">'
-      +'<td><input type="checkbox" name="check"></td>'
+      +'<tr>'
+      +'<td><input type="checkbox"></td>'
       +'<td><img  src="image/6.jpeg" class="helimg"></td>'
       +'<td>22334</td>'
       +'<td>xixi</td>'
@@ -61,13 +61,13 @@ var $healthPanel = function() {
       +'<td>遛弯</td>'
       +'<td>2</td>'
       +'<td>XXXXX</td>'
-      +'<td><button class="deledi" onclick="clickdel(`row3`)">删除</button><button class="deledi">编辑</button></td>'      
+      +'<td><button class="deledi">删除</button><button class="deledi">编辑</button></td>'      
       +'</tr>'
       
       +'</table>'
       + '</div>'
       +'<div class="ck_del">'
-      +'<input type="checkbox" id="all" onclick="selectall()" name="checkall">'
+      +'<input type="checkbox" id="all">'
       +'<label for="all">全选</label>'
       +'<button class="addma">批量删除</button>'
       +'</div>'
@@ -83,24 +83,3 @@ var $healthPanel = function() {
   
   return {show: show};
 }();
-function selectall(){
-            //获取全选复选框  
-            var root = document.getElementById("all");  
-            //获取全选复选框的状态  
-            var status = root.checked;  
-            //获取其他复选框集合  
-            var elem = document.getElementsByName("check");  
-            //如果全选复选框状态为真则全选其他按钮,否则选不选其他按钮  
-            if(status){  
-                for(var i = 0;i<elem.length;i++){  
-                    elem[i].checked =  true;  
-                }  
-            }else{  
-                for(var i = 0;i<elem.length;i++){  
-                    elem[i].checked =  false;  
-                }  
-            }     
-}
- function clickdel(id){
-      document.getElementById(id).parentNode.removeChild(document.getElementById(id));
- }

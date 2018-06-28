@@ -1,27 +1,27 @@
-var $imageManagePanel = function() {
+var $imageManagePanel = (function() {
   var $imageMagDOM = $(''
       +'<h2>图片管理</h2>'
        + '<div class="image-manage-panel">'
            +'<div class="row-image">'
-                +'<div class="image-col-one" id="div1">'
+                +'<div class="image-col-one">'
                     +'<img src="image/pic.png">'
                     +'<button class="image-col-one-examine">审查</button>'
-                    +'<button class="image-col-one-delete" onclick="clickdel(`div1`)">删除</button>'
+                    +'<button class="image-col-one-delete">删除</button>'
                 +'</div>'
-                +'<div class="image-col-one" id="div2">'
+                +'<div class="image-col-one">'
                     +'<img src="image/pic.png">'
                     +'<button class="image-col-one-examine">审查</button>'
-                    +'<button class="image-col-one-delete" onclick="clickdel(`div2s`)">删除</button>'
+                    +'<button class="image-col-one-delete">删除</button>'
                 +'</div>'
-                +'<div class="image-col-one" id="div3">'
+                +'<div class="image-col-one">'
                     +'<img src="image/pic.png">'
                     +'<button class="image-col-one-examine">审查</button>'
-                    +'<button class="image-col-one-delete" onclick="clickdel(`div3`)">删除</button>'
+                    +'<button class="image-col-one-delete">删除</button>'
                 +'</div>'
-                +'<div class="image-col-one" id="div4">'
+                +'<div class="image-col-one">'
                     +'<img src="image/pic.png">'
                     +'<button class="image-col-one-examine">审查</button>'
-                    +'<button class="image-col-one-delete" onclick="clickdel(`div4`)">删除</button>'
+                    +'<button class="image-col-one-delete">删除</button>'
                 +'</div>'
            +'</div>'
            
@@ -38,7 +38,4 @@ var $imageManagePanel = function() {
   }
 
   return {show: show};
-}();
-function clickdel(id){
-      document.getElementById(id).parentNode.removeChild(document.getElementById(id));
- }
+})();

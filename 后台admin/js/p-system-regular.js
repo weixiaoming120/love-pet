@@ -1,4 +1,4 @@
-var $syetemRegularPanel = function() {
+var $syetemRegularPanel = (function() {
   var $systemDOM = $(''
       +'<h2>管理员信息</h2>'
       +'<div class="system-regular-panel">'
@@ -13,7 +13,7 @@ var $syetemRegularPanel = function() {
       +'<th>邮箱</th>'
       +'<th>操作</th>'    
       +'</tr>'
-      +'<tr id="row1">'
+      +'<tr>'
       +'<td>123563</td>'
       +'<td>HanLu</td>'
       +'<td>韩璐</td>'
@@ -21,9 +21,9 @@ var $syetemRegularPanel = function() {
       +'<td>开发人员</td>'
       +'<td>13245678912</td>'
       +'<td>1234325322@qq.com</td>'
-      +'<td><button class="deledi" onclick="clickdel(`row1`)">删除</button><button class="deledi">编辑</button></td>'      
+      +'<td><button class="deledi">删除</button><button class="deledi">编辑</button></td>'      
       +'</tr>'
-      +'<tr id="row2">'
+      +'<tr>'
       +'<td>123563</td>'
       +'<td>HanLu</td>'
       +'<td>韩璐</td>'
@@ -31,9 +31,9 @@ var $syetemRegularPanel = function() {
       +'<td>开发人员</td>'
       +'<td>13245678912</td>'
       +'<td>1234325322@qq.com</td>'
-      +'<td><button class="deledi" onclick="clickdel(`row2`)">删除</button><button class="deledi">编辑</button></td>'      
+      +'<td><button class="deledi">删除</button><button class="deledi">编辑</button></td>'      
       +'</tr>'
-      +'<tr id="row3">'
+      +'<tr>'
       +'<td>123563</td>'
       +'<td>HanLu</td>'
       +'<td>韩璐</td>'
@@ -41,9 +41,9 @@ var $syetemRegularPanel = function() {
       +'<td>开发人员</td>'
       +'<td>13245678912</td>'
       +'<td>1234325322@qq.com</td>'
-      +'<td><button class="deledi" onclick="clickdel(`row3`)">删除</button><button class="deledi">编辑</button></td>'      
+      +'<td><button class="deledi">删除</button><button class="deledi">编辑</button></td>'      
       +'</tr>'
-      +'<tr id="row4">'
+      +'<tr>'
       +'<td>123563</td>'
       +'<td>HanLu</td>'
       +'<td>韩璐</td>'
@@ -51,21 +51,50 @@ var $syetemRegularPanel = function() {
       +'<td>开发人员</td>'
       +'<td>13245678912</td>'
       +'<td>1234325322@qq.com</td>'
-      +'<td><button class="deledi" onclick="clickdel(`row4`)">删除</button><button class="deledi">编辑</button></td>'      
-      +'</tr>'                           
+      +'<td><button class="deledi">删除</button><button class="deledi">编辑</button></td>'      
+      +'</tr>'
+      +'<tr>'
+      +'<td>123563</td>'
+      +'<td>HanLu</td>'
+      +'<td>韩璐</td>'
+      +'<td>女</td>'
+      +'<td>开发人员</td>'
+      +'<td>13245678912</td>'
+      +'<td>1234325322@qq.com</td>'
+      +'<td><button class="deledi">删除</button><button class="deledi">编辑</button></td>'      
+      +'</tr>'
+      +'<tr>'
+      +'<td>123563</td>'
+      +'<td>HanLu</td>'
+      +'<td>韩璐</td>'
+      +'<td>女</td>'
+      +'<td>开发人员</td>'
+      +'<td>13245678912</td>'
+      +'<td>1234325322@qq.com</td>'
+      +'<td><button class="deledi">删除</button><button class="deledi">编辑</button></td>'      
+      +'</tr>'
+      +'<tr>'
+      +'<td>123563</td>'
+      +'<td>HanLu</td>'
+      +'<td>韩璐</td>'
+      +'<td>女</td>'
+      +'<td>开发人员</td>'
+      +'<td>13245678912</td>'
+      +'<td>1234325322@qq.com</td>'
+      +'<td><button class="deledi">删除</button><button class="deledi">编辑</button></td>'      
+      +'</tr>'                                    
       +'</table>'
       + '</div>'
       +'<div>'
       +'<button class="add">添加管理员</button>'
       +'</div>');
 
+
+  
   function show() {
     $(app.config.panelContainer).html('');
     $(app.config.panelContainer).append($systemDOM);
   }
 
   return {show: show};
-}();
- function clickdel(id){
-      document.getElementById(id).parentNode.removeChild(document.getElementById(id));
- }
+})();
