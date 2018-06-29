@@ -26,7 +26,7 @@ our first cooperation
     
     
 ### 运行效果
-####前端
+#### 前端
 <img src="image/10.jpg" width=250 height=400 />
 <img src="image/14.jpg" width=250 height=400 />
 <img src="image/9.jpg" width=250 height=400 />
@@ -44,7 +44,7 @@ our first cooperation
 <img src="image/3.jpg" width=250 height=400 />
 <img src="image/15.jpg" width=250 height=400 />
 <img src="image/12.jpg" width=250 height=400 />
-####后台管理系统
+#### 后台管理系统
 <img src="image/19.jpg" width=800 height=500 />
 <img src="image/20.jpg" width=800 height=500 />
 
