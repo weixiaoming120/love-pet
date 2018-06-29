@@ -26,24 +26,25 @@ our first cooperation
     
     
 ### 运行效果
-<img src="image/1.jpg" width=250 height=400 />
-<img src="image/2.jpg" width=250 height=400 />
-<img src="image/3.jpg" width=250 height=400 />
-<img src="image/4.jpg" width=250 height=400 />
-<img src="image/5.jpg" width=250 height=400 />
-<img src="image/6.jpg" width=250 height=400 />
-<img src="image/7.jpg" width=250 height=400 />
-<img src="image/8.jpg" width=250 height=400 />
-<img src="image/9.jpg" width=250 height=400 />
+####前端
 <img src="image/10.jpg" width=250 height=400 />
-<img src="image/11.jpg" width=250 height=400 />
-<img src="image/12.jpg" width=250 height=400 />
-<img src="image/13.jpg" width=250 height=400 />
 <img src="image/14.jpg" width=250 height=400 />
-<img src="image/15.jpg" width=250 height=400 />
-<img src="image/16.jpg" width=250 height=400 />
-<img src="image/17.jpg" width=250 height=400 />
+<img src="image/9.jpg" width=250 height=400 />
 <img src="image/18.jpg" width=250 height=400 />
+<img src="image/16.jpg" width=250 height=400 />
+<img src="image/new.jpg" width=250 height=400 />
+<img src="image/8.jpg" width=250 height=400 />
+<img src="image/11.jpg" width=250 height=400 />
+<img src="image/1.jpg" width=250 height=400 />
+<img src="image/6.jpg" width=250 height=400 />
+<img src="image/5.jpg" width=250 height=400 />
+<img src="image/shop.jpg" width=250 height=400 />
+<img src="image/17.jpg" width=250 height=400 />
+<img src="image/7.jpg" width=250 height=400 />
+<img src="image/3.jpg" width=250 height=400 />
+<img src="image/15.jpg" width=250 height=400 />
+<img src="image/12.jpg" width=250 height=400 />
+####后台管理系统
 <img src="image/19.jpg" width=800 height=500 />
 <img src="image/20.jpg" width=800 height=500 />
 
